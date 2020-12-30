@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+
+.botãopress{fill: cyan;}
+
+.tela{background-color: ; position: absolute; width: 100%; top: 50px;
+    height: 600px}
+
+.fotoMensagem{background-color:; display: none; align-items: center;
+position: absolute; width: 100%;}
+
+.mensagem{background-color: turquoise; padding: 10px 30px; 
+margin-left: 30px; font-size: xx-large; display: flex; border-radius: 8px;}
+
+.tela .fotoMensagem img{width: 150px; margin-left: 10%; display: flex;}
+
+.campoBotão{display: flex; align-items: center; background-color: ;
+overflow: hidden; position: relative; top: 100%; transform: translateY(-100%);}
+
+.campo{width: 60%; background-color: ; border: 2px solid black;
+padding: 20px; font-size: x-large; margin: 0 auto 0 auto; height: 30px;
+transition: all 0.7s ease;}
+
+.botão{width: 60px; float: right; position: relative; right: 22%; stroke: black;}
+
+
+.animate{transform: translateX(2000px);}
+
+.película{width: 100vw; height: 100vh; background-color: rgba(4, 93, 99, 0);
+filter: blur(1px); position: absolute;}

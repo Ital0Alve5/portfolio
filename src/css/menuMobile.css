@@ -1,0 +1,86 @@
+*{
+    padding: 0; margin: 0; 
+    list-style: none; 
+    text-decoration: none; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.expand{display: none;}
+.película{display: none;}
+.nightIconContainer{display: none;}
+.translateContainer{display: none;}
+/*------------------------------ESTILO ÍCONE MENU MOBILE--------------------------*/
+
+.menu span{
+    background-color: black; 
+    width: 25px; 
+    height: 5px; 
+    position: absolute; 
+    top: 25px;
+    left: 15px;
+    transition: all .2s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+.menu span::after{
+    content: '';
+    background-color: black; 
+    width: 25px; 
+    height: 5px; 
+    position: absolute;
+    top: 10px;
+    transition: all .2s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+.menu span::before{
+    content: '';
+    background-color: black; 
+    width: 25px; 
+    height: 5px; 
+    position: absolute;
+    bottom: 10px;
+    transition: all .2s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+.menu label{
+    background-color: black; 
+    opacity: 0.2; 
+    width: 35px; 
+    height: 35px; 
+    position: absolute; 
+    z-index: 2;
+    border-radius: 3px;
+    top: 10px;
+    left: 10px;
+}
+#checkboxMenu{display: none;}
+
+/*----------------------FUNCIONAMENTO DO ÍCONE DO MENU-------------------------------*/
+
+#checkboxMenu:checked ~ span{background-color: transparent;}
+#checkboxMenu:checked ~ span::after{
+    transform: rotate(-45deg) translate(8px, -8px); 
+    background-color: red;
+}
+#checkboxMenu:checked ~ span::before{
+    transform: rotate(45deg) translate(6px, 7px);
+    background-color: red;
+}
+#checkboxMenu:checked ~ label{border-radius: 50%;}
+
+.iconeMenu{position: absolute; top: 10px; left: 10px;}
+
+/*-------------------------------MENU MOBILE ESTILO----------------------------------*/
+
+.menu ul{transition: all 0.3s ease; background-color: yellowgreen; width: 100vw;
+transform: translateY(-100vh);}
+.menu ul li a{background-color: rgb(0, 255, 255); display: flex; align-items: center;
+justify-content: center; height: 10vh; }
+.menu ul li a i{position: relative; margin-right: 20px;}
+
+/*-------------------------------MENU MOBILE FUNCIONAMENTO----------------------------------*/
+
+#checkboxMenu:checked ~ ul{transform: translateY(0);}
+
+

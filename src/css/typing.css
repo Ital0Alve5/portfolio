@@ -1,0 +1,6 @@
+.campo::after{content: '|'; display: inline;
+    counter-reset: black; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
