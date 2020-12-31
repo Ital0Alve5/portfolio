@@ -55,7 +55,7 @@ function aparecerMensagem(){
     }, 1000);
 }*/
 
-const fraseString = 'Olá, meu nome é italo'
+const fraseString = 'Opa, que bom te ver aqui! Seja bem-vino(a)!'
 const botão = document.querySelector('.botão')
 let i = 0
 let array = []
@@ -88,7 +88,7 @@ setTimeout(() => {
     })
     .then((campo)=>{
         let c = 0
-        const nomeCorrigido = 'Ítalo'
+        const nomeCorrigido = 'do(a)'
         return new Promise((resolve, reject)=>{
             const correção = setInterval(() => {
                 array.push(nomeCorrigido[c])
@@ -110,18 +110,15 @@ setTimeout(() => {
         setTimeout(() => {
         campo.innerHTML=''
         botão.style.fill = 'black'
-        botão.style.strokeWidth = 0;
+        botão.style.strokeWidth = 0
         fotoMensagem.style.display = 'flex'
-        let pseudo = document.styleSheets[0].cssRules[0]
-        let flag = false
-        setInterval(() => {
-            if(flag){pseudo.style.display = 'inline'; flag = false}
-            else{pseudo.style.display = 'none'; flag = true}
-        }, 500);
         }, 100);
         setTimeout(() => {
             campo.classList.add('animate')
             botão.classList.add('animate')
-        }, 2500);
+        }, 100);
+        setTimeout(() => {
+            fotoMensagem.classList.add('animate')
+        }, 5000);
     })
 }, 800);

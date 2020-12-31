@@ -2,16 +2,15 @@
 
 .botãopress{fill: cyan;}
 
-.tela{background-color: ; position: absolute; width: 100%; top: 50px;
-    height: 600px}
+.tela{background-color:; position: absolute; width: 100%; height: 700px}
 
-.fotoMensagem{background-color:; display: none; align-items: center;
-position: absolute; width: 100%;}
+.fotoMensagem{background-color:rgba(145, 145, 145, 0.459); display: none;
+align-items: center; justify-content: center; float: right; border-radius: 10px;
+margin: 10px 40px; padding: 20px; transition: all 0.7s ease;}
 
-.mensagem{background-color: turquoise; padding: 10px 30px; 
-margin-left: 30px; font-size: xx-large; display: flex; border-radius: 8px;}
+.mensagem{background-color: ; font-size: large; border-radius: 8px;}
 
-.tela .fotoMensagem img{width: 150px; margin-left: 10%; display: flex;}
+.tela .fotoMensagem img{width: 70px; position: absolute; transform: translate(240%, 75%);}
 
 .campoBotão{display: flex; align-items: center; background-color: ;
 overflow: hidden; position: relative; top: 100%; transform: translateY(-100%);}
@@ -22,8 +21,11 @@ transition: all 0.7s ease;}
 
 .botão{width: 60px; float: right; position: relative; right: 22%; stroke: black;}
 
-
 .animate{transform: translateX(2000px);}
 
 .película{width: 100vw; height: 100vh; background-color: rgba(4, 93, 99, 0);
 filter: blur(1px); position: absolute;}
+
+.habla{width: 100px; fill: rgba(145, 145, 145, 0.459); position: absolute;
+transform: translate(110%, 31%);}
+.tela{overflow: hidden;}
