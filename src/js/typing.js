@@ -55,7 +55,7 @@ function aparecerMensagem(){
     }, 1000);
 }*/
 
-const fraseString = 'Opa, que bom te ver aqui! Seja bem-vino(a)!'
+const fraseString = 'Opa! Seja bem-vino(a)!'
 const botão = document.querySelector('.botão')
 let i = 0
 let array = []
@@ -95,7 +95,7 @@ setTimeout(() => {
                 campo.innerHTML = array.join('')
                 c++
                 if(c == nomeCorrigido.length){
-                    botão.style.fill = 'white'
+                    botão.style.fill = '#33415e'
                     botão.style.strokeWidth = '800px';
                     clearInterval(correção)
                     resolve(campo)
@@ -119,6 +119,11 @@ setTimeout(() => {
         }, 100);
         setTimeout(() => {
             fotoMensagem.classList.add('animate')
+            setTimeout(()=>{
+                const tela = document.querySelector('.tela')
+                tela.style.display = 'none'
+            }, 1000)
         }, 5000);
+
     })
 }, 800);

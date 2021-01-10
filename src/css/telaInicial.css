@@ -5,11 +5,11 @@
 }
 input[type="checkbox"]{display: none;}
 
-
+.menu{position: fixed;}
 /*-------------------------POSICIONAMENTO MENU--------------------------------*/
 
 .menu ul{
-    background-color: rgba(0, 128, 0, 0.418);
+    background-color: #52658cab;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,7 +30,7 @@ input[type="checkbox"]{display: none;}
     width: 200px;
 }
 
-.menu ul li a:hover{color: white;}
+.menu ul li a:hover{color: white;  transition: all 0.3s ease;}
 
 .nightIconContainer {
     background-color: ;
@@ -86,7 +86,7 @@ input[type="checkbox"]{display: none;}
 
 /*-------------------------BOTÃO EXPAND--------------------------------*/
 
-.expand{width: 50px; height: 50px; background-color: greenyellow; border-radius: 50%;
+.expand{width: 50px; height: 50px; background-color: #52658C; border-radius: 50%;
 transform: translateX(-50%); z-index: 91; display: flex; align-items: center;
 justify-content: center;}
 .expand:hover{cursor: pointer;}
@@ -107,4 +107,3 @@ justify-content: center;}
     from{transform: translateX(0);}
     to{transform: translateX(-40%);}
 }
-
