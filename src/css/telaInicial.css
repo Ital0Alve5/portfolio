@@ -1,0 +1,105 @@
+*{
+    padding: 0; margin: 0; 
+    list-style: none; 
+    text-decoration: none; 
+}
+input[type="checkbox"]{display: none;}
+
+.menu{position: fixed;}
+/*-------------------------POSICIONAMENTO MENU--------------------------------*/
+
+.menu ul{
+    background-color: #52658cab;
+    display: flex;
+    width: 55px;
+    flex-direction: column;
+    font-size: xx-large;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a{
+    display: flex; 
+    margin: 20px 0 10px 0px; 
+    text-align: center;
+    color: black;
+    width: 200px;
+}
+
+.menu ul li a:hover{color: white;  transition: all 0.3s ease;}
+
+.nightIconContainer {
+    display: flex;
+    margin-top: 230px;
+    justify-content: center;
+    font-size: 40px
+}
+.nightIconContainer svg:hover{cursor: pointer;}
+.translateContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.translateContainer i:hover{cursor: pointer; color: white;}
+
+.translateContainer i{font-size: 30px;}
+.translateContainer p{font-size: large;}
+
+
+/*-------------------------EFEITO HOVER MENU--------------------------------*/
+
+/*.itemMenu::after{
+    content: ''; 
+    background-color: cadetblue; 
+    width: 100%;
+    position: absolute; 
+    height: 2px; 
+    top: 0; 
+    left: 0; 
+    transform: scaleX(0);
+    transform-origin: left; 
+    transition: all 0.2s ease;
+}
+.itemMenu::before{
+    content: ''; 
+    background-color: blue;
+    width: 100%;
+    position: absolute;
+    height: 2px; 
+    bottom: 0; 
+    right: 0; 
+    transform: scaleX(0);
+    transform-origin: right; 
+    transition: all 0.2s ease;
+}
+.itemMenu:hover::after{transform: scaleX(1);}
+.itemMenu:hover::before{transform: scaleX(1);}*/
+
+/*-------------------------BOTÃO EXPAND--------------------------------*/
+
+.expand{width: 50px; height: 50px; background-color: #52658C;
+border-radius: 50%; transform: translateX(-50%); z-index: 91;
+display: flex; align-items: center; justify-content: center;}
+.expand:hover{cursor: pointer;}
+.expand i{font-size: xx-large;}
+.menu{display: flex; align-items: center;}
+.menu ul li a i{margin-left: 10px;}
+.menu ul li a p{margin-left: 40px; font-size: x-large;}
+
+.animateArrowRight:hover > i{animation: 0.5s ease 0s normal
+none running animateRight;}
+
+.animateArrowLeft:hover > i{animation: 0.5s ease 0s normal
+none running animateLeft;}
+
+@keyframes animateRight{
+    from{transform: translateX(0);}
+    to{transform: translateX(40%);}
+}
+@keyframes animateLeft{
+    from{transform: translateX(0);}
+    to{transform: translateX(-40%);}
+}
