@@ -11,10 +11,19 @@ input[type="checkbox"]{display: none;}
 .menu ul{
     background-color: #52658cab;
     display: flex;
+<<<<<<< HEAD
     width: 55px;
     flex-direction: column;
     font-size: xx-large;
     height: 100vh;
+=======
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: xx-large;
+    height: 100vh;
+    width: 55px;
+    z-index: 10;
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -23,6 +32,10 @@ input[type="checkbox"]{display: none;}
     display: flex; 
     margin: 20px 0 10px 0px; 
     text-align: center;
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
     color: black;
     width: 200px;
 }
@@ -30,13 +43,24 @@ input[type="checkbox"]{display: none;}
 .menu ul li a:hover{color: white;  transition: all 0.3s ease;}
 
 .nightIconContainer {
+<<<<<<< HEAD
     display: flex;
     margin-top: 230px;
+=======
+    background-color: ;
+    display: flex;
+    margin-top: 350px;
+    align-items: center;
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
     justify-content: center;
     font-size: 40px
 }
 .nightIconContainer svg:hover{cursor: pointer;}
 .translateContainer{
+<<<<<<< HEAD
+=======
+    background-color: ;
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -45,7 +69,11 @@ input[type="checkbox"]{display: none;}
 }
 .translateContainer i:hover{cursor: pointer; color: white;}
 
+<<<<<<< HEAD
 .translateContainer i{font-size: 30px;}
+=======
+.translateContainer i{font-size: 30px; background-color: ;}
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
 .translateContainer p{font-size: large;}
 
 
@@ -80,13 +108,20 @@ input[type="checkbox"]{display: none;}
 
 /*-------------------------BOTÃO EXPAND--------------------------------*/
 
+<<<<<<< HEAD
 .expand{width: 50px; height: 50px; background-color: #52658C;
 border-radius: 50%; transform: translateX(-50%); z-index: 91;
 display: flex; align-items: center; justify-content: center;}
+=======
+.expand{width: 50px; height: 50px; background-color: #52658C; border-radius: 50%;
+transform: translateX(-50%); z-index: 91; display: flex; align-items: center;
+justify-content: center;}
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
 .expand:hover{cursor: pointer;}
 .expand i{font-size: xx-large;}
 .menu{display: flex; align-items: center;}
 .menu ul li a i{margin-left: 10px;}
+<<<<<<< HEAD
 .menu ul li a p{margin-left: 40px; font-size: x-large;}
 
 .animateArrowRight:hover > i{animation: 0.5s ease 0s normal
@@ -94,6 +129,13 @@ none running animateRight;}
 
 .animateArrowLeft:hover > i{animation: 0.5s ease 0s normal
 none running animateLeft;}
+=======
+.menu ul li a p{margin-left: 40px; background-color: ; font-size: x-large;}
+
+.animateArrowRight:hover > i{animation: 0.5s ease 0s normal none running animateRight;}
+
+.animateArrowLeft:hover > i{animation: 0.5s ease 0s normal none running animateLeft;}
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
 
 @keyframes animateRight{
     from{transform: translateX(0);}

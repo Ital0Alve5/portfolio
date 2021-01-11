@@ -118,11 +118,19 @@ setTimeout(() => {
             botão.classList.add('animate')
         }, 100);
         setTimeout(() => {
+<<<<<<< HEAD
             const tela = document.querySelector('.tela')
             tela.classList.add('animate')
             setTimeout(()=>{
                 tela.style.display = 'none'
             }, 2000)
+=======
+            fotoMensagem.classList.add('animate')
+            setTimeout(()=>{
+                const tela = document.querySelector('.tela')
+                tela.style.display = 'none'
+            }, 1000)
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
         }, 5000);
 
     })

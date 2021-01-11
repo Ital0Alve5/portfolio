@@ -7,4 +7,7 @@ function clickOutMenuUp(){
     })
 }
 clickOutMenuUp()
+<<<<<<< HEAD
 
+=======
+>>>>>>> f47865f607a5e1c5a0c697b7ba0425ef8fba471f
