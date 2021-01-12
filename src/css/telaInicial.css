@@ -33,7 +33,6 @@ input[type="checkbox"]{display: none;}
 .menu ul li a:hover{color: white;  transition: all 0.3s ease;}
 
 .nightIconContainer {
-    background-color: ;
     display: flex;
     margin-top: 350px;
     align-items: center;
