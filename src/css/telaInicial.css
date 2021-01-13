@@ -5,7 +5,7 @@
 }
 input[type="checkbox"]{display: none;}
 
-.menu{position: fixed;}
+.menu{position: fixed; display: flex; align-items: center;}
 /*-------------------------POSICIONAMENTO MENU--------------------------------*/
 
 .menu ul{
@@ -23,7 +23,7 @@ input[type="checkbox"]{display: none;}
 
 .menu ul li a{
     display: flex; 
-    margin: 20px 0 10px 0px; 
+    margin: 1vw 0 1vw 0px; 
     text-align: center;
     position: relative;
     color: black;
@@ -33,6 +33,7 @@ input[type="checkbox"]{display: none;}
 .menu ul li a:hover{color: white;  transition: all 0.3s ease;}
 
 .nightIconContainer {
+    background-color: ;
     display: flex;
     margin-top: 250px;
     align-items: center;
@@ -44,14 +45,38 @@ input[type="checkbox"]{display: none;}
     background-color: ;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 1vw;
     align-items: center;
     justify-content: center;
 }
 .translateContainer i:hover{cursor: pointer; color: white;}
 
-.translateContainer i{font-size: 30px; background-color: ;}
+.translateContainer i{font-size: 30px;}
 .translateContainer p{font-size: large;}
+
+/*-------------------------BOTÃO EXPAND--------------------------------*/
+
+.expand{width: 50px; height: 50px; background-color: #52658C; border-radius: 50%;
+transform: translateX(-50%); z-index: 91; display: flex; align-items: center;
+justify-content: center;}
+.expand:hover{cursor: pointer;}
+.expand i{font-size: xx-large;}
+.menu ul li a i{margin-left: 10px;}
+.menu ul li a p{margin-left: 40px; background-color: ; font-size: x-large;}
+
+.animateArrowRight:hover > i{animation: 0.5s ease 0s normal none running animateRight;}
+
+.animateArrowLeft:hover > i{animation: 0.5s ease 0s normal none running animateLeft;}
+
+@keyframes animateRight{
+    from{transform: translateX(0);}
+    to{transform: translateX(40%);}
+}
+@keyframes animateLeft{
+    from{transform: translateX(0);}
+    to{transform: translateX(-40%);}
+}
+
 
 
 /*-------------------------EFEITO HOVER MENU--------------------------------*/
@@ -82,27 +107,3 @@ input[type="checkbox"]{display: none;}
 }
 .itemMenu:hover::after{transform: scaleX(1);}
 .itemMenu:hover::before{transform: scaleX(1);}*/
-
-/*-------------------------BOTÃO EXPAND--------------------------------*/
-
-.expand{width: 50px; height: 50px; background-color: #52658C; border-radius: 50%;
-transform: translateX(-50%); z-index: 91; display: flex; align-items: center;
-justify-content: center;}
-.expand:hover{cursor: pointer;}
-.expand i{font-size: xx-large;}
-.menu{display: flex; align-items: center;}
-.menu ul li a i{margin-left: 10px;}
-.menu ul li a p{margin-left: 40px; background-color: ; font-size: x-large;}
-
-.animateArrowRight:hover > i{animation: 0.5s ease 0s normal none running animateRight;}
-
-.animateArrowLeft:hover > i{animation: 0.5s ease 0s normal none running animateLeft;}
-
-@keyframes animateRight{
-    from{transform: translateX(0);}
-    to{transform: translateX(40%);}
-}
-@keyframes animateLeft{
-    from{transform: translateX(0);}
-    to{transform: translateX(-40%);}
-}
