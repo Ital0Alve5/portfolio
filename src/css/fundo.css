@@ -1,11 +1,11 @@
-.película{width: 100vw; height: 100vh; position: absolute;
+.película{width: 100%; height: 100vh; position: absolute;
 display: flex; overflow: hidden;}
 .fundo{width: 100vw; height: 55vw; transform: translateY(-20%);
 position: absolute;}
 .película > h1:first-of-type{position: absolute; left: 15vw; top: 5vw; color: #7fa8a8;}
 .película > h1:last-child{position: absolute; left: 15vw; top: 16vw; color: #7fa8a8;}
 
-.logo{position: absolute; width: 20vw; left: 20vw; top: 8vw;}
+.logo{position: absolute; width: 20vw; left: 20vw; top: 8.5vw;}
 .notebook{width: 30vw; height: 30vw;position: absolute; right: 0;
 z-index: 10; animation: 3s infinite 0s normal none running flutuar;}
 @keyframes flutuar{

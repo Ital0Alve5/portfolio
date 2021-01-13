@@ -34,7 +34,7 @@ input[type="checkbox"]{display: none;}
 
 .nightIconContainer {
     display: flex;
-    margin-top: 350px;
+    margin-top: 250px;
     align-items: center;
     justify-content: center;
     font-size: 40px
