@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/css/typing.css" media = "screen and (min-width: 801px)" rel="stylesheet">
     <link href="./src/css/inicio.css" media = "screen and (min-width: 801px)" rel="stylesheet">
+    <link href="./src/css//mobile/inicioM.css" media = "screen and (max-width: 800px)" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
     <title>Document</title>
 </head>
 <body>
     <section class="inicio">
         <div class="fundo">
-            <img src="./src/img/background.svg">
-            <img src="./src/img/notebook.png" class="notebook">
-            <img src="./src/img/sombra.png" class="sombra">
-            <h1>Oi, meu nome é</h1>
-            <img src="./src/img/logo.png" class="logo">
-            <h1>desenvolvedor front-end<br>e backend para a web.</h1>
+                <img src="./src/img/background.svg">
+                <img src="./src/img/notebook.png" class="notebook">
+                <img src="./src/img/sombra.png" class="sombra">
+                <h1>Oi, meu nome é</h1>
+                <img src="./src/img/logo.png" class="logo">
+                <h1>desenvolvedor front-end<br>e backend para a web.</h1>
         </div>
 
         <div class="welcomeContainer">
@@ -31,6 +32,9 @@
         </div>
 
         <div class="menu">
+            <input type="checkbox" id="checkboxMenu" class="M">
+            <label for="checkboxMenu" class="M"></label>
+            <span id="ícone"></span>
             <ul class="sessões">
                 <li><a href="#"><i class="fas fa-home"></i><p>Início</p></a></li>
                 <li><a href="#"><i class="fas fa-info-circle"></i><p>Sobre mim</p></a></li>
@@ -64,7 +68,6 @@
             </ul>
         </div>
     </section>
-
     <script src="./src/js/expandMenu.js"></script>
     <script src="./src/js/cursor.js"></script>
 </body>
