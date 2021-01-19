@@ -1,9 +1,11 @@
 *{margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; list-style: none; 
 text-decoration: none;}
+.sobreMim{display: none;}
+.itensFlutuantes{display: none;}
 
 /*---------------------------------------TELA INICIAL-------------------------*/
 
-.inicio .fundo{overflow: hidden;}
+.inicio .fundo{overflow: hidden; width: 100%; height: 100vh;}
 
 #checkboxMenu{display: none;}
 
@@ -56,7 +58,7 @@ animation: 3s infinite 0s normal none running variar}
 top: 0px; left: 6px; z-index: 99;}
 
 #ícone{background-color: rgb(30, 52, 95); height: 0.5vw; width: 8vw;
-position: fixed; top: 5.5vw; left: 4vw; z-index: 80;}
+position: fixed; top: 5.5vw; left: 4vw; z-index: 80; transition: 0.2s;}
 
 #ícone::after{content: ''; background-color: rgb(30, 52, 95);
 height: 0.5vw; width: 8vw; position: absolute; top: 2vw;
@@ -66,7 +68,7 @@ transition: 0.3s; z-index: 80;}
 height: 0.5vw; width: 8vw; position: absolute;
 bottom: 2vw;  transition: 0.3s; z-index: 80;}
 
-#checkboxMenu:checked ~ span{background-color: transparent; transition: 0.2s;}
+#checkboxMenu:checked ~ span{background-color: transparent;}
 
 #checkboxMenu:checked ~ span::after{background-color: white;
 transform: rotate(45deg) translate(-20%, -250%);}

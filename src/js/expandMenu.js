@@ -11,13 +11,13 @@ class Menu{
     abrir = (flag)=>{
         if(window.innerWidth > 801){
             if(!flag){
-                this.menu.style.backgroundColor = '#bfcae06b'
+                this.menu.style.backgroundColor = '#CCE7D4'
                 this.menu.style.width = '200px'
                 this.arrow.classList.add('expandLeft')
                 this.arrow.classList.remove('arrow')
                 return
             }
-            this.menu.style.backgroundColor = '#bfcae06b'
+            this.menu.style.backgroundColor = '#CCE7D4'
             this.menu.style.width = '45px'
             this.arrow.classList.remove('expandLeft')
             this.arrow.classList.add('arrow')
