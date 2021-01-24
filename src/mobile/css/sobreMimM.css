@@ -1,0 +1,81 @@
+
+.sobreMim{display: flex; align-items: center;
+flex-direction: column;
+margin-top: 85vw;}
+
+.sobreMim img{width: 60vw;}
+
+.sobreMim p{background-color:#bfcae0; font-size: 4vw;
+padding: 2vw; border-radius: 1.5vw; margin: 2vw 0 1.5vw 0; 
+}
+
+.oi{ display: flex;
+flex-direction: column; justify-content: center;
+align-items: center; width: 100vw;} 
+
+.p{background-color: #bfcae0; display: flex;
+padding: 2vw; border-radius: 2vw;
+font-size: 4vw;}
+
+.estrofeNone{display: none;}
+
+.p div{word-wrap: break-word; max-width: 80vw;}
+
+.primeiroSpan{background-color: rgb(82,101,140);
+width: 2vw; height: 2vw; margin: 0.5vw; border-radius: 50%;
+animation: 1s linear infinite 0s normal none running digitandoSpanPrimeiro;
+}
+
+.segundoSpan{background-color: rgb(82,101,140);
+width: 2vw; height: 2vw; margin: 0.5vw; border-radius: 50%;
+animation: 1s linear infinite 0s normal none running digitandoSpanMeio;
+}
+
+.terceiroSpan{background-color: rgb(82,101,140);
+width: 2vw; height: 2vw; margin: 0.5vw; border-radius: 50%;
+animation: 1s linear infinite 0s normal none running digitandoSpanÚltimo;
+}
+
+@keyframes digitandoSpanPrimeiro{
+    0%{transform: translate(0%, -40%)}
+    10%{transform: translate(0%, -40%)}
+    20%{transform: translate(0%, 0%)}
+    30%{transform: translate(0%, 0%)}
+    40%{transform: translate(0%, 0%)}
+    50%{transform: translate(0%, 0%)}
+    60%{transform: translate(0%, 0%)}
+    70%{transform: translate(0%, 0%)}
+    80%{transform: translate(0%, 0%)}
+    90%{transform: translate(0%, 0%)}
+    100%{transform: translate(0%, -40%)}
+}
+
+@keyframes digitandoSpanMeio{
+    0%{transform: translate(0%, 0%)}
+    10%{transform: translate(0%, 0%)}
+    20%{transform: translate(0%, -40%)}
+    30%{transform: translate(0%, -40%)}
+    40%{transform: translate(0%, 0%)}
+    50%{transform: translate(0%, 0%)}
+    60%{transform: translate(0%, 0%)}
+    70%{transform: translate(0%, 0%)}
+    80%{transform: translate(0%, 0%)}
+    90%{transform: translate(0%, 0%)}
+    100%{transform: translate(0%, 0%)}
+}
+
+@keyframes digitandoSpanÚltimo{
+    0%{transform: translate(0%, 0%)}
+    10%{transform: translate(0%, 0%)}
+    20%{transform: translate(0%, 0%)}
+    30%{transform: translate(0%, 0%)}
+    40%{transform: translate(0%, 0%)}
+    50%{transform: translate(0%, -40%)}
+    60%{transform: translate(0%, -40%)}
+    70%{transform: translate(0%, 0%)}
+    80%{transform: translate(0%, 0%)}
+    90%{transform: translate(0%, 0%)}
+    100%{transform: translate(0%, 0%)}
+}
+
+.none{display: none;}

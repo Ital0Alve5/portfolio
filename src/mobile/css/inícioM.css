@@ -1,0 +1,175 @@
+#checkboxMenu{display: none;}
+
+.películaTransparente{width: 100vw; height: 100vh; position: absolute; z-index: 99;
+background-color: transparent; filter: blur(0px);}
+
+.películaEscura{width: 100vw; height: 100vh; position: absolute; z-index: 99;
+background-color: rgba(0, 0, 0, 0.391); filter: blur(10px);}
+
+/*------------------------------INÍCIO-----------------------------------*/
+
+.início{background-repeat: no-repeat; width: 100vw;
+background-size: cover; height: 140vw;
+background-image: url('../../img/fundoSmall.svg');
+display: flex; justify-content: center;}
+
+.início h1{font-size: 5vw; color:#CCE7D4;
+text-align: center;} 
+
+.início div:first-of-type{display: flex;
+justify-content: center; position: absolute;
+align-items: center; flex-direction: column;
+transform: translateY(40%); width: 100vw;}
+
+.início div:last-of-type{ justify-content: center;
+align-items: center; position: absolute;
+transform: translateY(100%); display:flex;}
+
+.logo{width: 50vw;}
+
+.notebook{width: 80vw; z-index: 2;
+animation: 3s linear infinite 0s normal none running flutuar;}
+  
+@keyframes flutuar{
+    0%{transform: translate(0%, 0%);}
+    50%{transform: translate(0%, -5%);}
+    100%{transform: translate(0%, 0%);}
+}
+
+.itensFlutuantes{width: 13vw; position: absolute; z-index: 2;}
+
+.sombra{width: 90vw; position: absolute;
+opacity: 0.7; transform: translateY(30%);
+animation: 3s linear infinite 0s normal none running variar;}
+
+@keyframes variar{
+    0%{transform: translate(1%, 40%); width: 90vw;}
+    50%{transform: translate(1%, 40%); width: 92vw;}
+    100%{transform: translate(1%, 40%); width: 90vw;}
+}
+
+.barra{width: 9vw; transform: translate(20%, -30%);
+animation: 2.5s linear infinite 0s normal none running flutuarBarra;}
+
+
+@keyframes flutuarBarra{
+    0%{transform: translate(20%, -20%);}
+    10%{transform: translate(20%, -30%);}
+    20%{transform: translate(20%, -30%);}
+    30%{transform: translate(20%, -30%);}
+    40%{transform: translate(20%, -30%);}
+    60%{transform: translate(20%, -30%);}
+    70%{transform: translate(20%, -20%);}
+    80%{transform: translate(20%, -20%);}
+    90%{transform: translate(20%, -20%);}
+    100%{transform: translate(20%, -20%);}
+} 
+
+.menorque{transform: translate(-20%, -20%); width: 13vw;
+animation: 2.5s linear infinite 0s normal none running flutuarMenor;}
+
+@keyframes flutuarMenor{
+    0%{transform: translate(-20%, -20%);}
+    20%{transform: translate(-20%, -20%);}
+    40%{transform: translate(-20%, -20%);}
+    60%{transform: translate(-20%, -10%);}
+    80%{transform: translate(-20%, -10%);}
+    100%{transform: translate(-20%, -20%);}
+}
+
+.maiorque{transform: translate(70%, 10%); width: 14vw;
+animation: 2.5s linear infinite 0s normal none running flutuarMaior;}
+
+
+@keyframes flutuarMaior{
+    0%{transform: translate(60%, 0%);}
+    10%{transform: translate(60%, 0%);}
+    20%{transform: translate(60%, 0%);}
+    30%{transform: translate(60%, -10%);}
+    40%{transform: translate(60%, -10%);}
+    50%{transform: translate(60%, -10%);}
+    60%{transform: translate(60%, -10%);}
+    70%{transform: translate(60%, -10%);}
+    80%{transform: translate(60%, 0%);}
+    90%{transform: translate(60%, 0%);}
+    100%{transform: translate(60%, 0%);}
+}
+
+/*-------------------------------------ÍCONE E FUNCIONAMENTO-----------------------*/
+
+.menu label{width: 12vw; height: 12vw; position: fixed;
+top: 0px; left: 6px; z-index: 99;}
+
+#ícone{background-color: #CCE7D4; height: 0.5vw; width: 8vw;
+position: fixed; top: 5.5vw; left: 4vw; z-index: 80; transition: 0.2s;}
+
+#ícone::after{content: ''; background-color: #CCE7D4;
+height: 0.5vw; width: 8vw; position: absolute; top: 2vw;
+transition: 0.3s; z-index: 80;}
+
+#ícone::before{content: ''; background-color:#CCE7D4;
+height: 0.5vw; width: 8vw; position: absolute;
+bottom: 2vw;  transition: 0.3s; z-index: 80;}
+
+#checkboxMenu:checked ~ span{background-color: transparent;}
+
+#checkboxMenu:checked ~ span::after{background-color: #CCE7D4;
+transform: rotate(45deg) translate(-20%, -250%);}
+
+#checkboxMenu:checked ~ span::before{background-color: #CCE7D4;
+transform: rotate(-45deg) translate(-20%, 300%);}
+
+/*-------------------------------------MENU-----------------------*/
+
+.menu{width: 100vw; display: flex; position: fixed; background-color: transparent;
+align-items: flex-start; justify-content: center; position: fixed;
+top:0; z-index: 99; transition: all 0.5s ease; height: 100vh;}
+
+.sessões{background-color: #CCE7D4; display: flex; width: 95%;
+flex-wrap: wrap; text-align: center; border-radius: 8px;
+margin-top: 13vw; transform: translateY(-500%); transition: all 0.5s ease;}
+
+.sessões li{width: 50%; display: flex;
+flex-direction: column; border-radius: 8px;}
+
+.sessões li i{font-size: 7vw}
+
+.sessões a{margin: 10px 10px; color: rgb(30, 52, 95);}
+
+.sessões p{margin: 10px 10px; color: rgb(30, 52, 95);}
+
+#checkboxMenu:checked ~ ul{transform: translateY(0%);}
+
+.lamp{display: none;}
+
+.language{display: none;}
+
+/*------------------------WELCOME----------------------------------------*/
+
+.welcomeContainer{height: 100vh; width: 100%; top: 0;
+z-index: 10; overflow: hidden; position: absolute;}
+
+.notificaçãoContainer{transition: all 1s ease; 
+height: 3vw; background-color:  #bfcae0; border-radius: 8px;
+padding: 10px 15px; position: absolute; right: 20vw; top: 20px;
+display: none; font-size: 4vw; align-items: center;}
+
+.notificaçãoContainer img{width: 15vw; position: absolute;
+right: 0; transform: translate(120%, 0%);}
+
+.notificaçãoContainer::after{content: ''; width: 8px; height: 8px;
+background-color:  #bfcae0; position: absolute;
+transform: rotate(45deg) translate(35%, -35%); right: 0;} 
+
+.campoDigitação{transition: all 1s ease; width: 80vw; height: 5vw;
+background-color: white; border-radius: 8px; 
+padding: 10px; margin: 0 auto; position: relative; top: 150vw;
+transform: translateY(-200%); border: 2px solid rgb(30, 52, 95);
+display: flex; align-items: center; font-size: 5vw;}
+
+.campoDigitação i{transform: rotate(45deg) translate(-50%, 50%);
+font-size:8vw; position: absolute; right: 0; color: rgb(30, 52, 95);} 
+
+.campoDigitação i:hover{cursor: pointer;}
+
+/*----------------------------SOBRE MIM-------------------------------------------*/
