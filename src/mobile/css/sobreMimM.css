@@ -1,6 +1,6 @@
 
 .sobreMim{display: flex; align-items: center;
-flex-direction: column;
+flex-direction: column; height: 60vh;
 margin-top: 85vw;}
 
 .sobreMim img{width: 60vw;}

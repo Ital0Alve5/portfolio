@@ -64,3 +64,17 @@ window.addEventListener('click', (e)=>{
         checkbox.checked = false
     }
 })
+
+
+const sessõesA = document.querySelectorAll('.sessões a')
+sessõesA.forEach((e)=>{
+    const href = e.getAttribute('href').replace('#', '')
+    e.addEventListener('click', ()=>{
+        const scrollarPara = document.querySelector(`.${href}`).offsetTop
+        if(window.innerWidth > 400){
+            window.scrollTo({behavior: 'smooth', top: scrollarPara-100, left: 0})
+        }
+        else{window.scrollTo({behavior: 'smooth', top: scrollarPara-50, left: 0})}
+    })
+})
+
