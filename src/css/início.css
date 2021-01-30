@@ -5,9 +5,7 @@
 /*-----------------------------------INÍCIO------------------------------------*/
 
 .início{background-image: url('../img/fundo.svg');
-background-size:100%;
-height: 100vh;
-width: 100%;
+background-size:100%; height: 100vh; width: 100%;
 overflow: hidden; position: absolute; background-repeat: no-repeat;}
 
 .logo{width:20vw;}

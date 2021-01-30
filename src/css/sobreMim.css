@@ -1,13 +1,15 @@
-.sobreMimContainer{width: 100%; height: 50vh;}
+.sobreMimContainer{width: 100%;
+height: 30vw; display: flex;
+justify-content: center;}
 
 .sobreMim{display: flex; align-items: center;
-justify-content: center; background-color: ;}
+justify-content: center; width: 100%;
+height: 50%;}
 
 .sobreMim img{width: 20vw;}
 
 .sobreMim p{background-color:#bfcae0; font-size: 1.5vw;
-padding: 1.2vw; border-radius: 1vw; margin-bottom: 1vw;
-}
+padding: 1.2vw; border-radius: 1vw; margin-bottom: 1vw;}
 
 .oi{background-color: ; display: flex;
 flex-direction: column; justify-content: center;
