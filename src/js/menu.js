@@ -57,8 +57,11 @@ menu.language.addEventListener('click', ()=>{
 })
 
 window.addEventListener('click', (e)=>{
-    if(window.innerWidth < 400){
-        if(e.target.classList.contains('M') || e.target.classList.contains('expand')){return}
+    if(window.innerWidth < 500){
+        if(e.target.classList.contains('M') ||
+        e.target.classList.contains('expand') ||
+        e.target.classList.contains('gallery__next') ||
+        e.target.classList.contains('gallery__prev')){return}
         if(!(checkbox.checked)){menu.abrir(checkbox.checked)}
         menu.película.classList.remove('películaEscura')
         checkbox.checked = false
@@ -71,10 +74,11 @@ sessõesA.forEach((e)=>{
     const href = e.getAttribute('href').replace('#', '')
     e.addEventListener('click', ()=>{
         const scrollarPara = document.querySelector(`.${href}`).offsetTop
-        if(window.innerWidth > 400){
+        if(window.innerWidth > 500){
             window.scrollTo({behavior: 'smooth', top: scrollarPara-100, left: 0})
+            return
         }
-        else{window.scrollTo({behavior: 'smooth', top: scrollarPara-50, left: 0})}
+        window.scrollTo({behavior: 'smooth', top: scrollarPara-50, left: 0})
     })
 })
 

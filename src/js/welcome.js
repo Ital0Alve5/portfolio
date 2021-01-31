@@ -65,7 +65,7 @@ class welcome{
             this.notificação.innerHTML = this.campo.innerHTML
             this.notificaçãoContainer.style.display = 'flex'
             this.campo.innerHTML = ''
-            const cursor = document.styleSheets[0].cssRules[0]
+            const cursor = document.styleSheets[1].cssRules[0]
             let flag = true
             let count = 0
             const enviado = setInterval(() => {
@@ -93,5 +93,5 @@ class welcome{
         }, 3000);
     }
 }
-const mensagem = new welcome('Opa, seja bem-vino(a)!', 'do(a)!')
+const mensagem = new welcome('Opa, seja bem-vinno(a)!', 'do(a)! ')
 mensagem.digitar()

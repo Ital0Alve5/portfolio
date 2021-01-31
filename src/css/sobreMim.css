@@ -1,6 +1,6 @@
 .sobreMimContainer{width: 100%;
 height: 30vw; display: flex;
-justify-content: center;}
+justify-content: center; align-items: center;}
 
 .sobreMim{display: flex; align-items: center;
 justify-content: center; width: 100%;

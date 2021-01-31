@@ -87,11 +87,11 @@ animation: 2.5s linear infinite 0s normal none running flutuarBarra;}
 
 /*---------------------------------------MENU-------------------------------------------------*/
 
-.menu{position: fixed; background-color: #bfcae094;; height: 100vh; 
+.menu{position: fixed; background-color:  #bfcae0cd; height: 100vh; 
 display: flex; z-index: 9999; justify-content: center;
 transition: all 0.2s ease; width: 45px;}
 
-.menuOpen{background-color: #CCE7D4; width: 250px;}
+.menuOpen{background-color: #bfcae059; width: 250px; backdrop-filter: blur(10px);}
 
 .sessões{width: 100%; overflow: hidden;}
 
@@ -124,7 +124,7 @@ flex-direction: column; text-align: center; margin:20px;}
 
 /*----------------------------------MENU BUTTON-----------------------------------*/
 
-.expand{width: 40px; background-color: rgb(82,101,140);
+.expand{width: 40px; background-color:  #4E5A62;
 position: absolute; border-radius: 50%; align-self: center; 
 transform: translateX(50%); z-index: 999;  height: 40px; right: 0;}
 
@@ -200,7 +200,7 @@ font-size:3vw; position: absolute; right: 0; color: rgb(30, 52, 95);}
 
 
 /*--------------------------------------------------MEDIUM SIZE----------------------------------------------------*/
-@media screen and (min-width: 400px) and (max-width: 700px){
+@media screen and (min-width: 500px) and (max-width: 700px){
 /*--------------------------------------------INÍCIO------------------------------------*/
 
 .logo{width:25vw;}

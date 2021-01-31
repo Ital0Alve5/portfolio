@@ -26,15 +26,7 @@ transform: rotateY(calc(var(--i)*45deg)) translateZ(30vw);}
 
 
 
-.certificados{width: 75%; display: flex;
-justify-content: center; align-items: center; flex-wrap: wrap;
-margin-left: 50%; transform: translateX(-50%);}
 
-.card img{width: 300px;}
-
-.card{ margin: 10px; display: flex; flex-direction: column;
-justify-content: center; align-items: center; font-size: 1vw;
-flex-wrap: wrap; width: 300px; text-align: center;}
 
 
 
