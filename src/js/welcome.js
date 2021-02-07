@@ -49,7 +49,7 @@ class welcome{
         .then(()=>{
             return new Promise((res)=>{
                 setTimeout(() => {
-                    this.arrow.style.color = '#bfcae0'
+                    this.arrow.style.color = '#BFCAE0'
                     res()
                 }, 200);
             })
@@ -61,7 +61,7 @@ class welcome{
     }
     enviar = ()=>{
         setTimeout(() => {
-            this.arrow.style.color = 'rgb(30, 52, 95)'
+            this.arrow.style.color = '#4E5A62'
             this.notificação.innerHTML = this.campo.innerHTML
             this.notificaçãoContainer.style.display = 'flex'
             this.campo.innerHTML = ''

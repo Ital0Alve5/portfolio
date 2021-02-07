@@ -72,13 +72,15 @@ window.addEventListener('click', (e)=>{
 const sessõesA = document.querySelectorAll('.sessões a')
 sessõesA.forEach((e)=>{
     const href = e.getAttribute('href').replace('#', '')
-    e.addEventListener('click', ()=>{
-        const scrollarPara = document.querySelector(`.${href}`).offsetTop
-        if(window.innerWidth > 500){
-            window.scrollTo({behavior: 'smooth', top: scrollarPara-100, left: 0})
+    console.log(href)
+    e.addEventListener('click', (e)=>{
+        if(href == 'sobreMim' && window.innerWidth>500){
+            const scrollarPara = document.querySelector(`.${href}`).offsetTop
+            window.scrollTo({behavior: 'smooth', top: scrollarPara+450, left: 0})
             return
         }
-        window.scrollTo({behavior: 'smooth', top: scrollarPara-50, left: 0})
+        const scrollarPara = document.querySelector(`.${href}`).offsetTop
+        window.scrollTo({behavior: 'smooth', top: scrollarPara-70, left: 0})
     })
 })
 

@@ -2,10 +2,11 @@
 
 #checkboxMenu{display: none;}
 
+body{background-color: #4E5A62;}
 /*-----------------------------------INÍCIO------------------------------------*/
 
 .início{background-image: url('../img/fundo.svg');
-background-size:100%; height: 100vh; width: 100%;
+background-size:100%; height:50vw; width: 100%;
 overflow: hidden; position: absolute; background-repeat: no-repeat;}
 
 .logo{width:20vw;}
@@ -87,18 +88,18 @@ animation: 2.5s linear infinite 0s normal none running flutuarBarra;}
 
 /*---------------------------------------MENU-------------------------------------------------*/
 
-.menu{position: fixed; background-color:  #bfcae0cd; height: 100vh; 
+.menu{position: fixed; background-color:#c2eecf9c; height: 100vh; 
 display: flex; z-index: 9999; justify-content: center;
 transition: all 0.2s ease; width: 45px;}
 
-.menuOpen{background-color: #bfcae059; width: 250px; backdrop-filter: blur(10px);}
+.menuOpen{background-color:#c2eecf38; width: 250px; backdrop-filter: blur(10px);}
 
 .sessões{width: 100%; overflow: hidden;}
 
 .sessões li a{display: flex; margin-top: 30px; 
-align-items: center; color: rgb(30, 52, 95);}
+align-items: center; color:#243946;}
 
-.sessões li:hover a{color: #bfcae0;}
+.sessões li:hover a{color: #585570;}
 
 .sessões li a i{font-size: xx-large; margin-left: 5px;}
 
@@ -110,7 +111,7 @@ flex-direction: column; text-align: center; margin:20px;}
 
 .menu ul:last-of-type li{margin-top: 10px;}
 
-.lamp{fill: rgb(30, 52, 95);}
+.lamp{fill: #243946}
 
 .lamp svg{width:35px;}
 
@@ -118,13 +119,13 @@ flex-direction: column; text-align: center; margin:20px;}
 
 .language{font-size: x-large;}
 
-.language{color: rgb(30, 52, 95)}
+.language{color:#243946}
 
 .language:hover{cursor: pointer;}
 
 /*----------------------------------MENU BUTTON-----------------------------------*/
 
-.expand{width: 40px; background-color:  #4E5A62;
+.expand{width: 40px; background-color:  #243946;
 position: absolute; border-radius: 50%; align-self: center; 
 transform: translateX(50%); z-index: 999;  height: 40px; right: 0;}
 
@@ -164,7 +165,7 @@ transition: .2s; transform-origin: right; border-radius: 2px;}
 top: 0; z-index: 10; overflow: hidden;}
 
 .notificaçãoContainer{transition: all 1s ease; 
-height: 3vw; background-color:  #bfcae0; border-radius: 8px;
+height: 3vw; background-color:  #BFCAE0; border-radius: 8px;
 padding: 10px 15px; position: absolute; right: 8vw; top: 20px;
 display: none; font-size: 1.5vw; align-items: center;}
 
@@ -172,16 +173,16 @@ display: none; font-size: 1.5vw; align-items: center;}
 right: 0; transform: translate(120%, 0%);}
 
 .notificaçãoContainer::after{content: ''; width: 15px;
-height: 15px; background-color:  #bfcae0; position: absolute;
+height: 15px; background-color:  #BFCAE0; position: absolute;
 transform: rotate(45deg) translate(35%, -35%); right: 0;} 
 
 .campoDigitação{transition: all 1s ease; width: 40vw; height: 3vw;
-background-color: white; border-radius: 8px; border: 2px solid rgb(30, 52, 95);
+background-color: white; border-radius: 8px; border: 2px solid #4E5A62;
 padding: 10px; margin: 0 auto; position: relative; top: 50vw; font-size: 1.5vw;
 transform: translateY(-150%); display: flex; align-items: center;}
 
 .campoDigitação i{transform: rotate(45deg) translate(-50%, 50%);
-font-size:3vw; position: absolute; right: 0; color: rgb(30, 52, 95);} 
+font-size:3vw; position: absolute; right: 0; color: #4E5A62;} 
 
 .campoDigitação i:hover{cursor: pointer;}
 
@@ -317,4 +318,5 @@ transition: .2s; transform-origin: right; border-radius: 2px;}
 
 .expand:hover .arrowLeft::before{transform: rotate(-45deg) translate(-10%, -250%) scaleX(1);}
 }
+
 

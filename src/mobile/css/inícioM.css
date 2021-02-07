@@ -1,5 +1,7 @@
 #checkboxMenu{display: none;}
 
+body{background-color: #4E5A62;}
+
 .películaTransparente{width: 100vw; height: 100vh; position: absolute; z-index: 99;
 background-color: transparent; filter: blur(0px);}
 
@@ -164,11 +166,11 @@ transform: rotate(45deg) translate(35%, -35%); right: 0;}
 .campoDigitação{transition: all 1s ease; width: 80vw; height: 5vw;
 background-color: white; border-radius: 8px; 
 padding: 10px; margin: 0 auto; position: relative; top: 150vw;
-transform: translateY(-200%); border: 2px solid rgb(30, 52, 95);
+transform: translateY(-200%); border: 2px solid #BFCAE0;
 display: flex; align-items: center; font-size: 5vw;}
 
 .campoDigitação i{transform: rotate(45deg) translate(-50%, 50%);
-font-size:8vw; position: absolute; right: 0; color: rgb(30, 52, 95);} 
+font-size:8vw; position: absolute; right: 0; color: #BFCAE0;} 
 
 .campoDigitação i:hover{cursor: pointer;}
 

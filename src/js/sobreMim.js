@@ -20,7 +20,7 @@ document.addEventListener('scroll', ()=>{
         psobreMim.classList.remove('estrofeNone')
     }
     else if(window.innerWidth < 500){
-        if(window.scrollY > (window.innerWidth/2.5)){
+        if(window.scrollY > (window.innerWidth)){
             primeiro.classList.add('none')
             segundo.classList.add('none')
             terceiro.classList.add('none')
