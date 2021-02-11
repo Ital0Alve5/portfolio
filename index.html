@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./src/css/typing.css">
     <link rel="stylesheet" href="./src/css/sobreMim.css" media = "screen and (min-width: 501px)">
     <link rel="stylesheet" href="./src/css/conhecimentos.css" media = "screen and (min-width: 501px)">
+    <link rel="stylesheet" href="./src/css/footer.css" media = "screen and (min-width: 501px)">
     <link rel="stylesheet" href="./src/mobile/css/inícioM.css" media = "screen and (max-width: 500px)">
     <link rel="stylesheet" href="./src/mobile/css/sobreMimM.css" media = "screen and (max-width: 500px)">
     <link rel="stylesheet" href="./src/mobile/css/conhecimentosM.css" media = "screen and (max-width: 500px)">
+    <link rel="stylesheet" href="./src/mobile/css/contatosM.css" media = "screen and (max-width: 500px)">
+    <link rel="stylesheet" href="./src/css/contato.css" media = "screen and (min-width: 501px)"> 
     <link rel="stylesheet" href="./src/js/menu.js" media = "screen and (min-width: 500px)">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
@@ -54,9 +57,9 @@
         <span id="ícone"></span>
         <ul class="sessões">
             <li><a href="#início"><i class="fas fa-home"></i><p>Início</p></a></li>
-            <li><a href="#sobreMim"><i class="fas fa-info-circle"></i><p>Sobre mim</p></a></li>
-            <li><a href="#conhecimentos"><i class="fas fa-book"></i><p>Conhecimentos</p></a></li>
-            <li><a href="#"><i class="fas fa-tasks"></i><p>Em breve</p></a></li>
+            <li><a href="#aboutMe"><i class="fas fa-info-circle"></i><p>Sobre mim</p></a></li>
+            <li><a href="#knowledges"><i class="fas fa-book"></i><p>Conhecimentos</p></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope-open-text"></i><p>Contato</p></a></li>
         </ul>
         <ul>
             <li class="lamp">
@@ -83,7 +86,7 @@
     </div>
 </div>
 </section>
-<section>
+<section class="aboutMe">
     <div class="sobreMimContainer">
         <div class="sobreMim">
             <img src="./src/img/mee.svg">
@@ -99,7 +102,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="knowledges">
     <div class="conhecimentos">
         <div class="galeriaTecnologias">
             <span style="--i:1"><img src="./src/img/javascript.svg"></span>
@@ -137,10 +140,40 @@
         </ul>
     </div>
 </section>
+<section class="contact">
+    <div class="contatoContainer">
+    <div class="contato">
+        <h1>Contato</h1>
+        <form>
+            <div class="forms">
+                    <input type="text" placeholder=" " id="nome" required>
+                    <label for="nome">Nome</label>
+            </div>
+            <div class="forms">
+                    <input type="email" placeholder=" " id="email" required> 
+                    <label for="email">Email</label>
+            </div>
+            <div class="forms">
+                <textarea id="msg" maxlength="200" minlength="5"
+                cols="50" rows="50"
+                required wrap="soft"></textarea>
+                <label for="msg" id="msgLabel">Mensagem</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+</section>
+<footer>
+    <div>
+        <p><i><strong>&#169; 2021 Copyright</strong></i></p>
+    </div>
+</footer>
 <script src="./src/js/menu.js" type="text/javascript"></script>
 <script src="./src/js/welcome.js" type="text/javascript"></script>
 <script src="./src/js/sobreMim.js" type="text/javascript"></script>
 <script src="./src/js/conhecimentos.js" type="text/javascript"></script>
+<script src="./src/js/contato.js" type="text/javascript"></script>
 
 </body>
 </html>

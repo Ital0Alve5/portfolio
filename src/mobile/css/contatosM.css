@@ -1,0 +1,68 @@
+footer{display: none;}
+
+.contato h1{position: absolute;  color: #4E5A62;
+font-size: 8vw; top: 3vw; }
+
+.contato button{padding: 2vw 1vw; font-size: 5vw; cursor: pointer;
+border: none; color:#CCE7D4; background-color: #4E5A62;
+border-radius: 1vw; margin-left: 50%;
+transform: translateX(-50%) translateY(50%);}
+
+.contatoContainer{transform: translateY(-8%); 
+background-image: url(../../img/fundoContatosSmall.svg);
+background-size: 100%; background-position-y: 40%;
+height: 150vw; display: flex; justify-content: center;
+flex-direction: column;}
+
+.contato{width: 50%; transition: all 1s ease; 
+height: 10vw; overflow: hidden; margin-top: 40%; 
+display: flex; justify-content: center; }
+
+.forms input::placeholder{color: transparent;}
+
+#msg{max-width: 90%; font-size: 5vw;
+max-height: 40vw; margin-left: 50%;
+transform: translateX(-50%) translateY(20%);
+resize: none; background-color: transparent;
+padding: 0.5vw; box-sizing: border-box;
+outline: none; transition: all 0.2s ease;
+overflow: hidden; border-width: 0.3vw;}
+
+#msgLabel{color: #4e5a6270; font-size: 5vw;
+position: relative; bottom: 40vw;
+transform: translateX(-20%);}
+
+#msg:focus{border-color: #A7C4D2;}
+
+#msg:focus + label{color:#A7C4D2;}
+
+.contato form{width: 90%; display: flex;
+flex-direction: column; height: 100%; border-radius: 2vw;
+justify-content: center; background-color: #CCE7D4;}
+
+.forms label{display: block; transition: all 0.3s ease;
+font-size: 5vw;}
+
+.forms input{border-style: none none solid none;
+margin-left: 50%; transform: translateX(-50%);
+border-width: 0.3vw; transition: all 0.3s ease;
+background-color: transparent; width: 90%;
+font-size: 5vw;
+border-color: #4E5A62; padding-top: 5vw;}
+
+.forms label{margin-left: 22%;
+transform:  translateX(-20%) translateY(-100%);
+color: #4e5a6270;}
+
+.forms input:focus{outline: none; border-color: #A7C4D2;}
+
+.forms input:focus + label {color: #A7C4D2;}
+
+.forms input:focus + label,
+.forms input:not(:placeholder-shown) + label{
+transition: all 0.3s ease;
+transform:translateX(-22%) translateY(-3.5em);
+font-size: 3vw;}
+
+.forms:focus-within{transform: scale(1.02, 1.02);
+transition: all 0.2s ease;}
