@@ -1,21 +1,21 @@
 footer{display: none;}
 
 .contato h1{position: absolute;  color: #4E5A62;
-font-size: 8vw; top: 3vw; }
+font-size: 8vw; transform: translateY(30%);}
 
-.contato button{padding: 2vw 1vw; font-size: 5vw; cursor: pointer;
-border: none; color:#CCE7D4; background-color: #4E5A62;
+.contato button{padding: 2vw 1vw; font-size: 5vw;
+cursor: pointer; border: none; color:#CCE7D4;
+background-color: #4E5A62;
 border-radius: 1vw; margin-left: 50%;
 transform: translateX(-50%) translateY(50%);}
 
 .contatoContainer{transform: translateY(-8%); 
 background-image: url(../../img/fundoContatosSmall.svg);
 background-size: 100%; background-position-y: 40%;
-height: 150vw; display: flex; justify-content: center;
-flex-direction: column;}
+height: 150vw; display: flex; flex-direction: column;}
 
-.contato{width: 50%; transition: all 1s ease; 
-height: 10vw; overflow: hidden; margin-top: 40%; 
+.contato{width: 0%; transition: all 1s ease; 
+height: 0%; overflow: hidden; margin-top: 40%; 
 display: flex; justify-content: center; }
 
 .forms input::placeholder{color: transparent;}
