@@ -12,7 +12,7 @@ class Validate{
 
     userSchema = ()=>{
         return (joi.object({
-            nome: joi.string().empty().lowercase().trim().min(2).max(20).regex(/^[a-zA-Z\s]+$/).required()
+            nome: joi.string().empty().lowercase().trim().min(2).max(20).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
             .messages({
                 "string.pattern.base": "\'Nome\' deve conter apenas letras",
                 "string.min": "\'Nome\' deve ter mais de 2 caracteres.",
