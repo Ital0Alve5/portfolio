@@ -12,7 +12,7 @@ class Validate{
 
     userSchema = ()=>{
         return (joi.object({
-            nome: joi.string().empty().lowercase().trim().min(2).max(20).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
+            nome: joi.string().empty().lowercase().trim().min(2).max(50).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
             .messages({
                 "string.pattern.base": "\'Nome\' deve conter apenas letras",
                 "string.min": "\'Nome\' deve ter mais de 2 caracteres.",
@@ -42,7 +42,7 @@ class Validate{
             const email = inputValidado.value.email
             const mensagem = inputValidado.value.mensagem.replace(/[<>//\\]/g, 'a')
             this.create(nome, email, mensagem)
-            return {"0": true, "1": `Mensagem enviada. Obrigado pelo contato, ${nome}!`}
+            return {"0": true, "1": `Mensagem enviada. Obrigado pelo contato, ${this.nome}!`}
         }
 
         else{
