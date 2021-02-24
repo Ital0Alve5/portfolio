@@ -2,16 +2,20 @@
 
 #checkboxMenu{display: none;}
 
-body{background-color: rgb(78,90,98); overflow-x: hidden;}
+body{background-color: var(--bodyColor); overflow-x: hidden;}
 
+.btn_mais{display: none;}
+
+.checkboxBtn{display: none;}
 /*-----------------------------------INÍCIO------------------------------------*/
 
 .início{
-    background-image: url('../img/fundo.svg');
+background-image: var(--backgroundInicio);
 background-size:100%; height:50vw; width: 100%;
 overflow: hidden; position: absolute; background-repeat: no-repeat;}
 
 .logo{width:20vw;}
+
 
 .notebook{width: 45vw;
 animation: 3s linear infinite 0s normal none running flutuar;
@@ -32,7 +36,7 @@ animation: 3s linear infinite 0s normal none running variar;}
 100%{transform: translate(0%, 40%); width: 46vw;}
 }
     
-.início h1{font-size: 2vw; align-self: flex-start; color:  #CCE7D4;} 
+.início h1{font-size: 2vw; align-self: flex-start; color:  var(--h1Color);} 
     
 .início div:first-of-type{display: flex; align-items: center;
 flex-direction: column; position: absolute; justify-content: center;
@@ -89,19 +93,21 @@ animation: 2.5s linear infinite 0s normal none running flutuarBarra;}
 }
 
 /*---------------------------------------MENU-------------------------------------------------*/
+.str0 {stroke: transparent;stroke-width:1270;stroke-miterlimit:22.9256}
+.fil0 {fill: var(--abasColor);fill-rule:nonzero}
 
-.menu{position: fixed; background-color:#CCE7D4; height: 100vh; 
+.menu{position: fixed; background-color:var(--menuColor); height: 100vh; 
 display: flex; z-index: 9999; justify-content: center;
 transition: all 0.2s ease; width: 45px;}
 
-.menuOpen{width: 250px; background-color:#c2eecf38; backdrop-filter: blur(10px);}
+.menuOpen{width: 250px; background-color:var(--menuOpen); backdrop-filter: blur(10px);}
 
 .sessões{width: 100%; overflow: hidden;}
 
 .sessões li a{display: flex; margin-top: 30px; 
-align-items: center; color:#243946;}
+align-items: center; color:var(--abasColor);}
 
-.sessões li:hover a{color: #585570;}
+.sessões li:hover a{color: var(--azulClaro);}
 
 .sessões li a i{font-size: xx-large; margin-left: 5px;}
 
@@ -113,7 +119,7 @@ flex-direction: column; text-align: center; margin:20px;}
 
 .menu ul:last-of-type li{margin-top: 10px;}
 
-.lamp{fill: #243946}
+.lamp{fill: var(--abasColor)}
 
 .lamp svg{width:35px;}
 
@@ -121,23 +127,23 @@ flex-direction: column; text-align: center; margin:20px;}
 
 .language{font-size: x-large;}
 
-.language{color:#243946}
+.language{color:var(--abasColor)}
 
 .language:hover{cursor: pointer;}
 
 /*----------------------------------MENU BUTTON-----------------------------------*/
 
-.expand{width: 40px; background-color:  #243946;
+.expand{width: 40px; background-color: var(--expandColor);
 position: absolute; border-radius: 50%; align-self: center; 
 transform: translateX(50%); z-index: 999;  height: 40px; right: 0;}
 
 .arrow{width: 10px; height: 10px; position: absolute;
-border: 3px solid #bfcae0; border-left: none;
+border: 3px solid var(--arrowColor); border-left: none;
 transform: rotate(45deg) translate(135%, 10%);
 transition: .2s; border-bottom: none;}
 
 .arrow::before{content: ''; position: absolute; width: 20px;
-height: 3px; background-color: #bfcae0;
+height: 3px; background-color: var(--arrowColor);
 transform: rotate(-45deg) translate(-20%, -250%) scaleX(0);
 transition: .2s; transform-origin: right; border-radius: 2px;}
 
@@ -148,12 +154,12 @@ transition: .2s; transform-origin: right; border-radius: 2px;}
 .expand:hover{cursor: pointer;}
 
 .arrowLeft{width: 10px; height: 10px; position: absolute;
-border: 3px solid #bfcae0; border-left: none;
+border: 3px solid var(--arrowColor); border-left: none;
 border-bottom: none; transform: rotate(-135deg) translate(-155%, 10%);
 transition: .2s;}
 
 .arrowLeft::before{content: ''; position: absolute; width: 20px;
-height: 3px; background-color: #bfcae0;
+height: 3px; background-color: var(--arrowColor);
 transform: rotate(-45deg) translate(-20%, -250%) scaleX(0);
 transition: .2s; transform-origin: right; border-radius: 2px;}
 
@@ -164,18 +170,20 @@ transition: .2s; transform-origin: right; border-radius: 2px;}
 /*-----------------------------------------WELCOME-----------------------------------------*/
 
 .welcomeContainer{height: 100vh; width: 100%; position: absolute;
-top: 0; z-index: 10; overflow: hidden;}
+top: 0; z-index: 10; overflow: hidden;
+}
 
-.notificaçãoContainer{transition: all 1s ease; 
-height: 3vw; background-color:  #BFCAE0; border-radius: 8px;
+.notificaçãoContainer{transition: all 1s ease; height: 3vw; 
+background-color: var(--azulClaroPrincipal); border-radius: 8px;
 padding: 10px 15px; position: absolute; right: 8vw; top: 20px;
-display: none; font-size: 1.5vw; align-items: center;}
+display: none; font-size: 1.5vw; align-items: center;
+}
 
 .notificaçãoContainer img{width: 6vw; position: absolute;
 right: 0; transform: translate(120%, 0%);}
 
 .notificaçãoContainer::after{content: ''; width: 15px;
-height: 15px; background-color:  #BFCAE0; position: absolute;
+height: 15px; background-color: var(--azulClaroPrincipal); position: absolute;
 transform: rotate(45deg) translate(35%, -35%); right: 0;} 
 
 .campoDigitação{transition: all 1s ease; width: 40vw; height: 3vw;
@@ -188,27 +196,13 @@ font-size:3vw; position: absolute; right: 0; color: #4E5A62;}
 
 .campoDigitação i:hover{cursor: pointer;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------------MEDIUM SIZE----------------------------------------------------*/
-@media screen and (min-width: 500px) and (max-width: 700px){
+@media screen and (min-width: 500px) and (max-width: 900px){
 /*--------------------------------------------INÍCIO------------------------------------*/
 
 .logo{width:25vw;}
 
-.início h1{font-size: 2.5vw; align-self: flex-start; color:  #CCE7D4;} 
+.início h1{font-size: 2.5vw; align-self: flex-start; color:  var();} 
 
 .início div:first-of-type{display: flex; flex-direction: column;
 position: absolute; justify-content: center; top: 50px;
@@ -272,7 +266,7 @@ display:flex; align-items: center; width: 47vw;}
 }
 
 /*----------------------------MENU----------------------------------------*/
-.menu{position: fixed; background-color: #CCE7D4;;; height: 100vh; 
+.menu{position: fixed; background-color: var(--h1Color); height: 100vh; 
 display: flex; z-index: 9999; justify-content: center;
 transition: all 0.2s ease; width: 35px;}
 
@@ -288,17 +282,17 @@ transition: all 0.2s ease; width: 35px;}
 
 /*--------------------------------MENU BUTTON-------------------------------------*/
 
-.expand{width: 30px; background-color: #243946;; 
+.expand{width: 30px; background-color: var(--expandColor); 
 position: absolute; border-radius: 50%; align-self: center;
 right: 0; transform: translateX(50%); z-index: 999; height: 30px;}
 
 .arrow{width: 8px; height: 8px; position: absolute;
-border: 3px solid #bfcae0; border-left: none;
+border: 3px solid var(--arrowColor); border-left: none;
 border-bottom: none; transform: rotate(45deg) translate(110%, 10%);
 transition: .2s;}
 
 .arrow::before{content: ''; position: absolute; width: 15px;
-height: 2.5px; background-color: #bfcae0;
+height: 2.5px; background-color: var(--arrowColor);
 transform: rotate(-45deg) translate(-20%, -220%) scaleX(0);
 transition: .2s; transform-origin: right; border-radius: 2px;}
 
@@ -307,12 +301,12 @@ transition: .2s; transform-origin: right; border-radius: 2px;}
 .expand:hover .arrow::before{transform: rotate(-45deg) translate(-20%, -220%) scaleX(1);}
 
 .arrowLeft{width: 8px; height: 8px; position: absolute;
-border: 3px solid #bfcae0; border-left: none;
+border: 3px solid var(--arrowColor); border-left: none;
 border-bottom: none; transform: rotate(-135deg) translate(-140%, 10%);
 transition: .2s;}
 
 .arrowLeft::before{content: ''; position: absolute; 
-height: 2.5px; background-color: #bfcae0; width: 15px;
+height: 2.5px; background-color: var(--arrowColor); width: 15px;
 transform: rotate(-45deg) translate(-20%, -350%) scaleX(0);
 transition: .2s; transform-origin: right; border-radius: 2px;}
 

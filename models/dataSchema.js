@@ -4,30 +4,51 @@ const Schema = mongoose.Schema
 const nodemailer = require('nodemailer');
 class Validate{
 
-    constructor(nome, email, mensagem){
+    constructor(nome, email, mensagem, lang){
         this.nome = nome,
         this.email = email,
         this.mensagem = mensagem
+        this.lang = lang
     }
 
     userSchema = ()=>{
-        return (joi.object({
-            nome: joi.string().empty().lowercase().trim().min(2).max(50).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
-            .messages({
-                "string.pattern.base": "\'Nome\' deve conter apenas letras",
-                "string.min": "\'Nome\' deve ter mais de 2 caracteres.",
-                "string.empty": "\'Nome\' deve ser preenchido."
-            }),
-            email: joi.string().empty().email({minDomainSegments: 2, tlds: {allow: ['com', 'net']}})
-            .lowercase().trim().required()
-            .messages({"string.email": "Email inválido.",
-            "string.empty": "\'Email\' deve ser preenchido."}),
-            mensagem: joi.string().empty().lowercase().trim().min(2).lowercase().trim().required()
-            .messages({"string.min": "\'Mensagem\' deve ter mais de 2 caracteres.",
-            "string.base": "\'Mensagem\' deve conter apenas letras.",
-            "string.empty": "\'Mensagem\' deve ser preenchido." 
-        })
-        }))
+        if(this.lang == 'PT'){
+            return (joi.object({
+                nome: joi.string().empty().lowercase().trim().min(2).max(50).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
+                .messages({
+                    "string.pattern.base": "\'Nome\' deve conter apenas letras",
+                    "string.min": "\'Nome\' deve ter mais de 2 caracteres.",
+                    "string.empty": "\'Nome\' deve ser preenchido."
+                }),
+                email: joi.string().empty().email({minDomainSegments: 2, tlds: {allow: ['com', 'net']}})
+                .lowercase().trim().required()
+                .messages({"string.email": "Email inválido.",
+                "string.empty": "\'Email\' deve ser preenchido."}),
+                mensagem: joi.string().empty().lowercase().trim().min(2).lowercase().trim().required()
+                .messages({"string.min": "\'Mensagem\' deve ter mais de 2 caracteres.",
+                "string.base": "\'Mensagem\' deve conter apenas letras.",
+                "string.empty": "\'Mensagem\' deve ser preenchido." 
+            })
+            }))
+        }
+        else{
+            return (joi.object({
+                nome: joi.string().empty().lowercase().trim().min(2).max(50).regex(/^[a-zA-ZáéíóúÁÉÍÓÚãõÃÕñÑâêîôûÂÊÎÔÛÀèÈÌìòùÒÙ\s]+$/).required()
+                .messages({
+                    "string.pattern.base": "\'Name\' must only countain letters",
+                    "string.min": "\'Name\' must countain more than 2 characters",
+                    "string.empty": "\'Name\' must to be filled."
+                }),
+                email: joi.string().empty().email({minDomainSegments: 2, tlds: {allow: ['com', 'net']}})
+                .lowercase().trim().required()
+                .messages({"string.email": "Email is not valid",
+                "string.empty": "\'Email\' must to be filled."}),
+                mensagem: joi.string().empty().lowercase().trim().min(2).lowercase().trim().required()
+                .messages({"string.min": "\'Message\' must countain more than 2 characters",
+                "string.empty": "\'Message\' must to be filled." 
+            })
+            }))
+        }
     }
 
     validateSchema = ()=>{
@@ -77,24 +98,5 @@ class Validate{
     }
 
 }
-
-// class Email{
-//     constructor(email, mensagem){
-//         this.remetente = nodemailer.createTransport({
-//             host: '',
-//             service: '',
-//             port: 587,
-//             secure: true,
-//             user: 'italo_alves_@outlook.com',
-//             pass: 'misterlane30'
-//         }),
-//         this.email = email,
-//         this.mensagem = mensagem
-//     }
-
-//     enviarEmail = ()=>{
-//         from: 
-//     }
-// }
 
 module.exports = Validate

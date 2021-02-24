@@ -1,3 +1,4 @@
+
 class Menu{
     constructor(){
         this.menu = document.querySelector('.menu')
@@ -21,14 +22,30 @@ class Menu{
     }
 
     ON_OFF = (flag)=>{
-        const on = '.str0 {stroke: rgb(30, 52, 95);stroke-width:1270;stroke-miterlimit:22.9256}.fil0 {fill: rgb(30, 52, 95);fill-rule:nonzero}'
-        const style = document.createElement('style')
-        style.innerHTML = on
+        const mee = document.querySelector('.sobreMim img')
+        const raiosLamp = document.querySelectorAll('.str0')
         if(!flag){
-            menu.lamp.childNodes[1].removeChild(menu.lamp.childNodes[1].childNodes[1])
-            return
-        }
-        menu.lamp.childNodes[1].insertBefore(style, menu.lamp.childNodes[1].childNodes[1])
+            if(window.innerWidth < 500){
+                for(let raio of raiosLamp){
+                    raio.style.stroke = 'var(--h1Color)'
+                }
+                mee.setAttribute('src', './img/meeClaro.svg')
+                document.documentElement.classList.toggle('darkmode')
+                return
+            }
+            for(let raio of raiosLamp){
+                raio.style.stroke = 'var(--abasColor)'
+            }
+                mee.setAttribute('src', './img/meeClaro.svg')
+                document.documentElement.classList.toggle('darkmode')
+                return
+            }
+            for(let raio of raiosLamp){
+                raio.style.stroke = 'transparent'
+            }
+            document.documentElement.classList.toggle('darkmode')
+            mee.setAttribute('src', './img/mee.svg')
+
     }
 
     PT_EN = (flag)=>{this.language.childNodes[1].innerHTML = flag}
@@ -41,7 +58,8 @@ const checkbox = document.querySelector('#checkboxMenu')
 menu.botão.addEventListener('click', ()=>{menu.abrir(checkbox.checked)})
 
 menu.lamp.addEventListener('click', ()=>{
-    if(menu.lamp.childNodes[1].childNodes[1].nodeName.toLocaleLowerCase() == 'style'){
+    const raiosLamp = document.querySelector('.str0')
+    if(window.getComputedStyle(raiosLamp).stroke == 'rgba(0, 0, 0, 0)'){
         menu.ON_OFF(false)
         return
     }
@@ -51,9 +69,12 @@ menu.lamp.addEventListener('click', ()=>{
 menu.language.addEventListener('click', ()=>{
     if(menu.language.childNodes[1].innerHTML == 'PT'){
         menu.PT_EN('EN')
+        i18next.changeLanguage('en')
         return
     }
     menu.PT_EN('PT')
+    i18next.changeLanguage('pt')
+
 })
 
 window.addEventListener('click', (e)=>{
@@ -81,4 +102,13 @@ sessõesA.forEach((e)=>{
         window.scrollTo({behavior: 'smooth', top: scrollarPara-200, left: 0})
     })
 })
-
+const languageP = document.querySelector('.language p')
+const language = document.querySelector('.language')
+language.addEventListener('click', ()=>{
+    window.localStorage.setItem('lang', languageP.innerHTML)
+})
+window.onload = ()=>{
+    if(localStorage.getItem('lang') == 'EN'){
+        language.click()
+    }
+}

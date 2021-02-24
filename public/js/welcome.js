@@ -1,19 +1,17 @@
 class welcome{
-    constructor(frase, correção){
+    constructor(){
         this.notificação = document.querySelector('.notificaçãoContainer p')
         this.campoContainer = document.querySelector('.campoDigitação')
         this.notificaçãoContainer = document.querySelector('.notificaçãoContainer')
         this.campo = document.querySelector('.campoDigitação p')
         this.arrow = document.querySelector('.campoDigitação i')
-        this.frase = frase
-        this.correção = correção
     }
-    digitar = ()=>{
+    digitar = (frase, correção)=>{
         const digitar = new Promise((res)=>{
             let c = 0
             const digitação = setInterval(() => {
-                if(c < this.frase.length){
-                    this.campo.innerHTML += this.frase[c]
+                if(c < frase.length){
+                    this.campo.innerHTML += frase[c]
                     c++
                     return
                 }
@@ -25,7 +23,7 @@ class welcome{
             return new Promise((res)=>{
                 let c = 1
                 const apagar = setInterval(() => {
-                    if(c < this.correção.length){
+                    if(c < correção.length){
                         this.campo.innerHTML = this.campo.innerHTML.slice(0, -1)
                         c++
                         return
@@ -38,8 +36,8 @@ class welcome{
             return new Promise((res)=>{
                 let c = 0
                 const corrigir = setInterval(() => {
-                    if(c < this.correção.length){
-                        this.campo.innerHTML += this.correção[c]
+                    if(c < correção.length){
+                        this.campo.innerHTML += correção[c]
                         c++
                     }
                     else{clearInterval(corrigir); res()}
@@ -93,5 +91,12 @@ class welcome{
         }, 3000);
     }
 }
-const mensagem = new welcome('Opa, seja bem-vinno(a)!', 'do(a)! ')
-mensagem.digitar()
+
+const mensagem = new welcome()
+if(localStorage.getItem('lang')=='EN'){
+    mensagem.digitar('Hey, be welcime!', 'ome! ')
+}
+else{
+    mensagem.digitar('Opa, seja bem-vinno(a)!', 'do(a)! ')
+}
+

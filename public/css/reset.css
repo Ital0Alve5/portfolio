@@ -1,26 +1,69 @@
-*{padding: 0; font-family: Arial, Helvetica, sans-serif; 
-text-decoration: none; list-style: none; margin: 0;}
-.container{width: 100%; height: 55vw;}
-
-/* Largura da barra de rolagem */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Fundo da barra de rolagem */
-::-webkit-scrollbar-track-piece {
-    background-color: rgba(238, 238, 238, 0);
-    border-left: 1px solid rgba(204, 204, 204, 0)
-}
-
-/* Cor do indicador de rolagem */
-::-webkit-scrollbar-thumb:vertical,
-::-webkit-scrollbar-thumb:horizontal {
-    background-color:#bfcae0
-}
-
-/* Cor do indicador de rolagem - ao passar o mouse */
-::-webkit-scrollbar-thumb:vertical:hover,
-::-webkit-scrollbar-thumb:horizontal:hover {
-    background-color: rgb(82,101,140)
-}
+*{padding: 0;font-family: 'Merriweather Sans', sans-serif;
+    text-decoration: none; list-style: none; margin: 0;}
+    .container{width: 100%; height: 55vw;}
+    
+    .darkmode:root{
+        --bodyColor:#E6E7E8;
+        --ConhecimentosColor:rgb(78,90,98);
+        --menuColor:rgb(78,90,98);
+        --abasColor:#E6E7E8;
+        --expandColor:rgb(78,90,98);
+        --menuOpen:rgba(78, 90, 98, 0.466);
+        --arrowColor:#E6E7E8;
+        --h1Color:rgb(78,90,98);
+        --detalhes: #C8C5E2;
+        --backgroundInicio: url(../img/fundoClaro.svg);
+        --mee:url(../img/meeClaro.svg);
+        --backgroundSobremim: url(../img/fundosobreMimClaro.svg);
+        --backgroundContatos: url(../img/fundoContatosClaro.svg);
+        --backgroundInicioMobile: url(../../img/fundoSmallClaro.svg);
+        --backgroundConhecimentosMobile: url(../../img/fundoConhecimentosSmallClaro.svg);
+        --backgroundContatosMobile: url(../../img/fundoContatosSmallCLaro.svg);
+    }
+    
+    :root{
+        --azulClaro:rgb(167,196,210);
+        --azulEscuro:rgb(78,90,98);
+        --azulClaroPrincipal:#CCE7D4;
+        --bodyColor:rgb(78,90,98);
+        --ConhecimentosColor:rgb(167,196,210);
+        --menuColor:#CCE7D4;
+        --abasColor:rgb(78,90,98);
+        --expandColor:#CCE7D4;
+        --menuOpen:#cce7d471;
+        --arrowColor:rgb(78,90,98);
+        --h1Color:#CCE7D4;
+        --detalhes: #C8C5E2;
+        --backgroundInicio: url(../img/fundo.svg);
+        --mee: url(../img/mee.svg);
+        --backgroundSobremim: url(../img/fundosobreMim.svg);
+        --backgroundContatos: url(../img/fundoContatos.svg);
+        --backgroundInicioMobile: url(../../img/fundoSmall.svg);
+        --backgroundConhecimentosMobile: url(../../img/fundoConhecimentosSmall.svg);
+        --backgroundContatosMobile: url(../../img/fundoContatosSmall.svg);
+    
+    
+    
+    }
+    /* Largura da barra de rolagem */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Fundo da barra de rolagem */
+    ::-webkit-scrollbar-track-piece {
+        background-color: rgba(238, 238, 238, 0);
+        border-left: 1px solid rgba(204, 204, 204, 0)
+    }
+    
+    /* Cor do indicador de rolagem */
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-webkit-scrollbar-thumb:horizontal {
+        background-color:#bfcae0
+    }
+    
+    /* Cor do indicador de rolagem - ao passar o mouse */
+    ::-webkit-scrollbar-thumb:vertical:hover,
+    ::-webkit-scrollbar-thumb:horizontal:hover {
+        background-color: rgb(82,101,140)
+    }

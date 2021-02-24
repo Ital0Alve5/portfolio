@@ -1,41 +1,39 @@
-.statusMsg{background-color: rgb(228, 123, 123); color: #4E5A62;
+.statusMsg{background-color: rgb(228, 123, 123); color: var(--azulEscuro);
 padding: 1.5vw;border-radius: 1vw; position: absolute; top: 0; left: 50%;
 font-size: 1.5vw; transition: all 1s ease; opacity: 0; 
 transform: translateX(-50%) translateY(100%);}
 
-.statusMsgOn{background-color: rgb(228, 123, 123); color: #4E5A62;
+.statusMsgOn{background-color: rgb(228, 123, 123); color: var(--azulEscuro);
 padding: 1.5vw;border-radius: 1vw; position: absolute; top: 0; left: 50%;
 font-size: 1.5vw; z-index: 55; opacity: 0;
 animation: 2s ease-in-out  0s normal none running msgOn;
 }
 
 @keyframes msgOn{
-0%{opacity: 0; transform: translateX(-50%) translateY(230%);}
-20%{opacity:1; transform: translateX(-50%) translateY(500%);}
-25%{opacity:1; transform: translateX(-50%) translateY(480%);}
-30%{opacity:1; transform: translateX(-50%) translateY(500%);}
-60%{opacity:1; transform: translateX(-50%) translateY(500%);}
-70%{opacity:1; transform: translateX(-50%) translateY(500%);}
-100%{opacity:0; transform: translateX(-50%) translateY(500%);}
-
+    0%{opacity: 0; transform: translateX(-50%) translateY(230%);}
+    20%{opacity:1; transform: translateX(-50%) translateY(500%);}
+    25%{opacity:1; transform: translateX(-50%) translateY(480%);}
+    30%{opacity:1; transform: translateX(-50%) translateY(500%);}
+    60%{opacity:1; transform: translateX(-50%) translateY(500%);}
+    70%{opacity:1; transform: translateX(-50%) translateY(500%);}
+    100%{opacity:0; transform: translateX(-50%) translateY(500%);}
 }
 
-.contato h1{position: absolute; top: 1.5vw; color: #4E5A62; font-size: 3vw;}
+.contato h1{position: absolute; top: 1.5vw; color: var(--abasColor); font-size: 3vw;}
 
-.contato{width: 30%; overflow: hidden; height: 6vw; background-color: #CCE7D4;
+.contato{width: 30%; overflow: hidden; height: 6vw; background-color: var(--h1Color);
 display: flex; justify-content: center; border-radius: 2vw;
 transition: all 1s ease; position: relative; 
-top:50%; box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.288);}
+top:40%; box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.288);}
 
-.contato button{padding: 1vw; font-size: 1.2vw; outline: none;
-border: none; color:#CCE7D4; background-color: #4E5A62;
+.contato button{padding: 1vw; font-size: 1.2vw;
+border: none; color:var(--h1Color); background-color: var(--abasColor);
 border-radius: 0.5vw; margin-left: 50%; transform: translateX(-50%) translateY(50%);}
-.contato button:hover{cursor: pointer;}
 
-.contatoContainer{background-color: #4E5A62; transform: translateY(-65%);
-background-image: url(../img/fundoContatos.svg); background-size: 100%;
-background-repeat: no-repeat; background-position-y: 5%;
-height: 40vw; }
+.contatoContainer{ transform: translateY(-50%);
+background-image: var(--backgroundContatos); background-size: 100%;
+background-repeat: no-repeat; 
+height: 35vw; display: flex; align-items: center;}
 
 .contatoContainer form{margin-top: 7vw;}
 
@@ -43,8 +41,8 @@ height: 40vw; }
 
 .forms input{border-style: none none solid none;
 border-width: 0.3vw; transition: all 0.3s ease; font-size: 1vw;
-background-color: transparent; width: 100%; border-color: #4E5A62;
-padding-top: 1vw; margin-top: 1.7vw;}
+background-color: transparent; width: 100%; border-color: var(--abasColor);
+padding-top: 1vw;}
 
 .forms input::placeholder{color: transparent;}
 
@@ -54,7 +52,7 @@ border-color: #A7C4D2;}
 .forms input:focus + label {color: #A7C4D2;}
 
 .forms input:focus + label,
-.forms input:not(:placeholder-shown) + label{transform: translateY(-3em);
+.forms input:not(:placeholder-shown) + label{transform: translateY(-2.5em);
 font-size: 1vw;}
 
 .forms:focus-within{transform: scale(1.05, 1.05);
@@ -62,20 +60,25 @@ transition: all 0.2s ease;}
 
 .forms label{transform: translate(0.2em, -1.45em);
 transform-origin: 0 0; transition: all 0.3s ease;
-color: #4e5a6270; display: block; font-size: 1.3vw;}
+color: var(--abasColor); display: block; font-size: 1.3vw;}
 
 #msg{background-color: transparent; padding: 0.5vw; box-sizing: border-box;
-outline: none; max-width: 20vw; max-height: 10vw; border-color: #4E5A62;
+outline: none; max-width: 20vw; max-height: 10vw; border-color: var(--abasColor);
 font-size: 1.3vw; transition: all 0.2s ease; transform: translateY(30%);
-resize: none; overflow: hidden; border-width: 0.3vw; margin-top: 1vw;}
+resize: none; overflow: hidden; border-width: 0.3vw;}
 
 #msg:focus{border-color: #A7C4D2;}
 
 #msg:focus + label{color:#A7C4D2;}
 
-#msgLabel{color: #4e5a6270; display: block;
+#msgLabel{color: var(--abasColor); display: block;
 transform: none; position: relative; bottom: 9.5vw;
 margin:0 0 0.4vw 0.1vw}
 
 .erro{position: absolute; color: rgb(228, 123, 123);
-font-size: 1vw; transform: translateY(-20%); opacity: 0;}
+word-wrap: break-word;
+font-size: 1vw; transform: translateY(-100%); opacity: 0;}
+
+.msgErro{position: absolute; color: rgb(228, 123, 123);
+    word-wrap: break-word;
+    font-size: 1vw; transform: translateY(-70%); opacity: 0;}

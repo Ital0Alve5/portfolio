@@ -10,7 +10,7 @@ if(window.innerWidth > 500){
      .then(()=>{
           const intervalo = setInterval(()=>{
               if(div.getBoundingClientRect().x > window.innerWidth/3){
-                  div.style.height = '43vw'
+                  div.style.height = '39vw'
                   clearInterval(intervalo)
                 }
             })
@@ -19,6 +19,7 @@ if(window.innerWidth > 500){
 }
 else{
     if(div.getBoundingClientRect().top <  innerHeight-((24*innerHeight)/100)+100){
+        const btnIcone = document.querySelector('.btn_mais')
         new Promise((res)=>{
         div.style.marginLeft = '50%'
         div.style.transform = 'translateX(-50%)'
@@ -35,8 +36,6 @@ else{
 }
 })
 
-
-
 const submit = document.querySelector('.enviar')
 let msgCount = 0
 
@@ -50,20 +49,17 @@ submit.addEventListener('click', (e)=>{
     const nomeError = document.querySelector('.nomeErro')
     const emailError = document.querySelector('.emailErro')
     const msgError = document.querySelector('.msgErro')
-
+    const languageP = document.querySelector('.language p')
     nomeError.style.opacity = 0
     emailError.style.opacity = 0
-    msgError.style.opacity = 0
-    console.log(typeof nome)
-        
-    
+    msgError.style.opacity = 0        
     if(msgCount < 1){
-        console.log(msgCount)
     fetch('/', {
         body: JSON.stringify({
             nome: nome,
             email: email,
-            msg: msg
+            msg: msg,
+            lang: languageP.innerHTML
         }),
         headers:  { 'Content-Type': 'application/json' },
         method: 'POST'
@@ -81,7 +77,7 @@ submit.addEventListener('click', (e)=>{
 
             const map = new Map(Object.entries(resposta))
             map.forEach((e)=>{
-                if(e.indexOf('Nome') > -1){nomeError.innerHTML = e; nomeError.style.opacity = 1}
+                if(e.indexOf('Name') > -1 || e.indexOf('Nome') > -1){nomeError.innerHTML = e; nomeError.style.opacity = 1}
                 else if(e.indexOf('Email') > -1){emailError.innerHTML = e; emailError.style.opacity = 1}
                 else{msgError.innerHTML = e; msgError.style.opacity = 1}
             })
@@ -99,10 +95,8 @@ submit.addEventListener('click', (e)=>{
     })
     }
     else{
-        console.log('não entrou')
         statusMsg.innerHTML = 'Mensagem já enviada.'
         statusMsg.style.backgroundColor = 'rgb(228, 123, 123)'
         statusMsg.classList.toggle('statusMsgOn')
     }
 })
-

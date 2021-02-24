@@ -1,6 +1,6 @@
 #checkboxMenu{display: none;}
 
-body{background-color: #4E5A62;}
+body{background-color: var(--bodyColor);}
 
 .películaTransparente{width: 100vw; height: 100vh; position: absolute; z-index: 99;
 background-color: transparent; filter: blur(0px);}
@@ -8,14 +8,16 @@ background-color: transparent; filter: blur(0px);}
 .películaEscura{width: 100vw; height: 410vh; position: absolute; z-index: 99;
 background-color: rgba(0, 0, 0, 0.391); filter: blur(10px);}
 
+
+
 /*------------------------------INÍCIO-----------------------------------*/
 
 .início{background-repeat: no-repeat; width: 100vw;
 background-size: cover; height: 140vw;
-background-image: url('../../img/fundoSmall.svg');
+background-image: var(--backgroundInicioMobile);
 display: flex; justify-content: center;}
 
-.início h1{font-size: 5vw; color:#CCE7D4;
+.início h1{font-size: 5vw; color:var(--h1Color);
 text-align: center;} 
 
 .início div:first-of-type{display: flex;
@@ -99,35 +101,63 @@ animation: 2.5s linear infinite 0s normal none running flutuarMaior;}
 
 /*-------------------------------------ÍCONE E FUNCIONAMENTO-----------------------*/
 
-.menu label{width: 12vw; height: 12vw; position: fixed;
+.menu label:first-of-type{width: 12vw; height: 12vw; position: fixed;
 top: 0px; left: 6px; z-index: 99;}
 
-#ícone{background-color: #CCE7D4; height: 0.5vw; width: 8vw;
+#ícone{background-color: var(--h1Color); height: 0.5vw; width: 8vw;
 position: fixed; top: 5.5vw; left: 4vw; z-index: 80; transition: 0.2s;}
 
-#ícone::after{content: ''; background-color: #CCE7D4;
+#ícone::after{content: ''; background-color: var(--h1Color);
 height: 0.5vw; width: 8vw; position: absolute; top: 2vw;
 transition: 0.3s; z-index: 80;}
 
-#ícone::before{content: ''; background-color:#CCE7D4;
+#ícone::before{content: ''; background-color:var(--h1Color);
 height: 0.5vw; width: 8vw; position: absolute;
 bottom: 2vw;  transition: 0.3s; z-index: 80;}
 
 #checkboxMenu:checked ~ span{background-color: transparent;}
 
-#checkboxMenu:checked ~ span::after{background-color: #CCE7D4;
+#checkboxMenu:checked ~ span::after{background-color: var(--h1Color);
 transform: rotate(45deg) translate(-20%, -250%);}
 
-#checkboxMenu:checked ~ span::before{background-color: #CCE7D4;
+#checkboxMenu:checked ~ span::before{background-color: var(--h1Color);
 transform: rotate(-45deg) translate(-20%, 300%);}
+/*----------------------------BTN-MAIS---------------------*/
+#checkboxBtn{display: none;}
+
+.lamp{width: 11vw;}
+
+.language{display: flex; flex-direction: column;
+align-items: center; font-size: 6vw; margin-top: 10px;} 
+
+.menu ul:last-of-type{ opacity: 0;
+transition: 0.3s all ease;
+position: fixed; right: 5vw; top: 79vh;
+}
+
+.btn_mais{background-color: var(--detalhes); width: 12vw; height: 12vw;
+border-radius: 50%; position: fixed;
+top:85vh; z-index: 999; left: 83vw;}
+
+.fa-plus{font-size: 9vw; position: relative; top: 50%;
+color: #4E5A62;
+left: 50%; transform: translateX(-50%) translateY(-50%);}
+
+#checkboxBtn:checked ~ ul{transform: translateY(-80%); opacity: 1}
+#checkboxBtn:checked ~ label div i{transition:0.4s ease all; transform: 
+translateX(-50%) translateY(-50%) rotate(225deg)}
+#checkboxBtn:not(:checked) ~ label div i{transition:0.4s ease all; transform: 
+translateX(-50%) translateY(-50%) rotate(0deg)}
 
 /*-------------------------------------MENU-----------------------*/
+.str0 {stroke: transparent;stroke-width:1270;stroke-miterlimit:22.9256}
+.fil0 {fill: var(--abasColor);fill-rule:nonzero}
 
 .menu{width: 100vw; display: flex; position: fixed; background-color: transparent;
 align-items: flex-start; justify-content: center; position: fixed;
 top:0; z-index: 99; transition: all 0.5s ease; height: 5vh;}
 
-.sessões{background-color: #CCE7D4; display: flex; width: 95%;
+.sessões{background-color: var(--h1Color); display: flex; width: 95%;
 flex-wrap: wrap; text-align: center; border-radius: 8px;
 margin-top: 13vw; transform: translateY(-500%); transition: all 0.5s ease;}
 
@@ -136,15 +166,16 @@ flex-direction: column; border-radius: 8px;}
 
 .sessões li i{font-size: 7vw}
 
-.sessões a{margin: 10px 10px; color: rgb(30, 52, 95);}
+.sessões a{margin: 10px 10px; color: var(--abasColor);}
 
-.sessões p{margin: 10px 10px; color: rgb(30, 52, 95);}
+.sessões p{margin: 10px 10px; color: var(--abasColor);}
 
 #checkboxMenu:checked ~ ul{transform: translateY(0%);}
 
-.lamp{display: none;}
+.lamp{fill: var(--h1Color)}
 
-.language{display: none;}
+.language{color:var(--h1Color)}
+
 
 /*------------------------WELCOME----------------------------------------*/
 
@@ -152,7 +183,7 @@ flex-direction: column; border-radius: 8px;}
 z-index: 10; overflow: hidden; position: absolute;}
 
 .notificaçãoContainer{transition: all 1s ease; 
-height: 3vw; background-color:  #bfcae0; border-radius: 8px;
+height: 3vw; background-color:  var(--h1Color); border-radius: 8px;
 padding: 10px 15px; position: absolute; right: 20vw; top: 20px;
 display: none; font-size: 4vw; align-items: center;}
 
@@ -160,7 +191,7 @@ display: none; font-size: 4vw; align-items: center;}
 right: 0; transform: translate(120%, 0%);}
 
 .notificaçãoContainer::after{content: ''; width: 8px; height: 8px;
-background-color:  #bfcae0; position: absolute;
+background-color:  var(--h1Color); position: absolute;
 transform: rotate(45deg) translate(35%, -35%); right: 0;} 
 
 .campoDigitação{transition: all 1s ease; width: 80vw; height: 5vw;
