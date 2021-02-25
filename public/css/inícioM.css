@@ -3,10 +3,10 @@
 body{background-color: var(--bodyColor);}
 
 .películaTransparente{width: 100vw; height: 100vh; position: absolute; z-index: 99;
-background-color: transparent; filter: blur(0px);}
+background-color: transparent;}
 
-.películaEscura{width: 100vw; height: 410vh; position: absolute; z-index: 99;
-background-color: rgba(0, 0, 0, 0.391); filter: blur(10px);}
+.películaEscura{width: 100vw; height: 620vw; position: absolute; z-index: 99;
+background-color: rgba(0, 0, 0, 0.391);}
 
 
 
@@ -99,7 +99,7 @@ animation: 2.5s linear infinite 0s normal none running flutuarMaior;}
     100%{transform: translate(60%, 0%);}
 }
 
-/*-------------------------------------ÍCONE E FUNCIONAMENTO-----------------------*/
+/*-----------------------ÍCONE DO MENU E FUNCIONAMENTO-----------------------*/
 
 .menu label:first-of-type{width: 12vw; height: 12vw; position: fixed;
 top: 0px; left: 6px; z-index: 99;}
@@ -125,25 +125,25 @@ transform: rotate(-45deg) translate(-20%, 300%);}
 /*----------------------------BTN-MAIS---------------------*/
 #checkboxBtn{display: none;}
 
-.lamp{width: 11vw;}
+.lamp{width: 11vw; fill: var(--abasColor)}
 
-.language{display: flex; flex-direction: column;
+.language{display: flex; flex-direction: column; color:var(--abasColor);
 align-items: center; font-size: 6vw; margin-top: 10px;} 
 
 .menu ul:last-of-type{ opacity: 0;
-transition: 0.3s all ease;
+transition: 0.3s all ease; transform: scale(0.3);
 position: fixed; right: 5vw; top: 79vh;
 }
 
-.btn_mais{background-color: var(--detalhes); width: 12vw; height: 12vw;
+.btn_mais{background-color: var(--menuColor); width: 12vw; height: 12vw;
 border-radius: 50%; position: fixed;
 top:85vh; z-index: 999; left: 83vw;}
 
 .fa-plus{font-size: 9vw; position: relative; top: 50%;
-color: #4E5A62;
+color: var(--colorLampM);
 left: 50%; transform: translateX(-50%) translateY(-50%);}
 
-#checkboxBtn:checked ~ ul{transform: translateY(-80%); opacity: 1}
+#checkboxBtn:checked ~ ul{transform: translateY(-80%) scale(1); opacity: 1}
 #checkboxBtn:checked ~ label div i{transition:0.4s ease all; transform: 
 translateX(-50%) translateY(-50%) rotate(225deg)}
 #checkboxBtn:not(:checked) ~ label div i{transition:0.4s ease all; transform: 
@@ -206,3 +206,12 @@ font-size:8vw; position: absolute; right: 0; color: #4E5A62;}
 .campoDigitação i:hover{cursor: pointer;}
 
 /*----------------------------SOBRE MIM-------------------------------------------*/
+
+.btn_mais1{background-color: var(--colorLampM);}
+.fa-plus1{color: var(--colorLampM2);}
+.lamp1{fill: var(--colorLampM)}
+.language1{color:var(--colorLampM)}
+.btn_mais2{background-color: var(--colorLampM2);}
+.fa-plus2{color: var(--colorLampM)}
+.lamp2{fill: var(--colorLampM2)}
+.language2{color: var(--colorLampM2)}

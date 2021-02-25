@@ -19,7 +19,6 @@ if(window.innerWidth > 500){
 }
 else{
     if(div.getBoundingClientRect().top <  innerHeight-((24*innerHeight)/100)+100){
-        const btnIcone = document.querySelector('.btn_mais')
         new Promise((res)=>{
         div.style.marginLeft = '50%'
         div.style.transform = 'translateX(-50%)'

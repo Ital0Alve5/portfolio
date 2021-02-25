@@ -27,7 +27,7 @@ class Menu{
         if(!flag){
             if(window.innerWidth < 500){
                 for(let raio of raiosLamp){
-                    raio.style.stroke = 'var(--h1Color)'
+                    raio.style.stroke = 'var(--azulClaro)'
                 }
                 mee.setAttribute('src', './img/meeClaro.svg')
                 document.documentElement.classList.toggle('darkmode')

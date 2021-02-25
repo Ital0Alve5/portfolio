@@ -11,6 +11,8 @@
         --menuOpen:rgba(78, 90, 98, 0.466);
         --arrowColor:#E6E7E8;
         --h1Color:rgb(78,90,98);
+        --colorLampM: #CCE7D4;
+        --colorLampM2: rgb(78,90,98);
         --detalhes: #C8C5E2;
         --backgroundInicio: url(../img/fundoClaro.svg);
         --mee:url(../img/meeClaro.svg);
@@ -26,6 +28,8 @@
         --azulEscuro:rgb(78,90,98);
         --azulClaroPrincipal:#CCE7D4;
         --bodyColor:rgb(78,90,98);
+        --colorLampM: rgb(78,90,98);
+        --colorLampM2: #CCE7D4;
         --ConhecimentosColor:rgb(167,196,210);
         --menuColor:#CCE7D4;
         --abasColor:rgb(78,90,98);
