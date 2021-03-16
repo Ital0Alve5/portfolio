@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 const joi = require('joi')
 const Schema = mongoose.Schema
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer')
 class Validate{
-
     constructor(nome, email, mensagem, lang){
         this.nome = nome,
         this.email = email,

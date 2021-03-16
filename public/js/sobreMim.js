@@ -1,7 +1,7 @@
 const primeiro = document.querySelector('.primeiroSpan')
 const segundo = document.querySelector('.segundoSpan')
 const terceiro = document.querySelector('.terceiroSpan')
-const psobreMim = document.querySelector('.p div')
+const psobreMim = document.querySelector('.p p')
 const sobremim = document.querySelector('.p')
 document.addEventListener('scroll', ()=>{
     if(window.innerWidth > 1000){
