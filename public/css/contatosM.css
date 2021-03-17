@@ -1,4 +1,3 @@
-footer{display: none;}
 
 .contato h1{position: absolute;  color: var(--abasColor);
 font-size: 8vw; transform: translateY(30%);}
@@ -43,6 +42,9 @@ background-color: var(--h1Color); justify-content: center;}
 
 .forms label{display: block; transition: all 0.3s ease;
 font-size: 5vw;}
+
+.contatoDoneDimensions{width: 100%; height: 100%;}
+.contatoDoneTranslate{margin-left: 50%; transform: translateX(-50%);}
 
 .forms input{border-style: none none solid none;
 margin-left: 50%; transform: translateX(-50%);

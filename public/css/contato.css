@@ -26,6 +26,10 @@ display: flex; justify-content: center; border-radius: 2vw;
 transition: all 1s ease; position: relative; 
 top:40%; box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.288);}
 
+.contatoDoneDimensions{width: 30vw; height: 40vw;}
+.contatoDoneTranslate{margin-left: 50%; transform: translateX(-50%);}
+
+
 .contato button{padding: 1vw; font-size: 1.2vw;
 border: none; color:var(--h1Color); background-color: var(--abasColor);
 border-radius: 0.5vw; margin-left: 50%; transform: translateX(-50%) translateY(50%);}
