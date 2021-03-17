@@ -5,7 +5,7 @@ body{background-color: var(--bodyColor);}
 .películaTransparente{width: 100vw; height: 100vh; position: absolute; z-index: 99;
 background-color: transparent;}
 
-.películaEscura{width: 100vw; height: 620vw; position: absolute; z-index: 99;
+.películaEscura{width: 100vw; height: 695vw; position: absolute; z-index: 99;
 background-color: rgba(0, 0, 0, 0.391);}
 
 
