@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const joi = require('joi')
 const Schema = mongoose.Schema
-// const nodemailer = require('nodemailer')
+const SendMail = require('./emailSender')
 class Validate{
     constructor(nome, email, mensagem, lang){
         this.nome = nome,
@@ -62,6 +62,8 @@ class Validate{
             const email = inputValidado.value.email
             const mensagem = inputValidado.value.mensagem.replace(/[<>//\\]/g, 'a')
             this.create(nome, email, mensagem)
+            const sendmail = new SendMail(inputValidado.value.nome.replace(/[<>//\\]/g, 'a'), inputValidado.value.email, inputValidado.value.mensagem.replace(/[<>//\\]/g, 'a'))
+            sendmail.enviar()
             return {"0": true, "1": `Mensagem enviada. Obrigado pelo contato, ${this.nome}!`}
         }
 
