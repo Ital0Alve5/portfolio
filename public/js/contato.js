@@ -68,6 +68,9 @@ submit.addEventListener('click', (e)=>{
         if(response.status > 200 || response.status < 300){
             if(resposta['0'] == true){
                 msgCount++
+                document.querySelector('#nome').value = ''
+                document.querySelector('#email').value = ''
+                document.querySelector('#msg').value = ''
                 statusMsg.innerHTML = resposta['1']
                 statusMsg.style.backgroundColor = 'rgb(174, 243, 141)'
                 statusMsg.classList.toggle('statusMsgOn')
